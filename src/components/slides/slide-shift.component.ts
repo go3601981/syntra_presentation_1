@@ -31,12 +31,12 @@ import { CommonModule } from '@angular/common';
       <!-- Content Container -->
       <div class="relative z-10 flex-1 flex flex-col">
         <!-- Header -->
-        <div class="pt-10 pb-4 px-12 text-center animate-fade-in">
-          <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-2 uppercase" style="color: #3e785c">
+        <div class="pt-6 pb-2 px-12 text-center animate-fade-in">
+          <h1 class="text-2xl md:text-4xl font-bold tracking-tight mb-1 uppercase" style="color: #3e785c">
             {{ t.translate('slide2.title') }}
           </h1>
-          <div class="h-1 w-24 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_10px_#3EFFC4] mb-4"></div>
-          <p class="text-lg md:text-xl text-slate-600 font-medium max-w-4xl mx-auto">
+          <div class="h-1 w-20 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_10px_#3EFFC4] mb-2"></div>
+          <p class="text-base md:text-lg text-slate-600 font-medium max-w-4xl mx-auto">
             {{ t.translate('slide2.subtitle') }}
           </p>
         </div>
@@ -54,16 +54,16 @@ import { CommonModule } from '@angular/common';
               </div>
               
               <!-- Fragmented Search Results -->
-              <div class="space-y-4 opacity-60 grayscale group hover:grayscale-0 transition-all duration-700">
-                @for (i of [1,2,3,4]; track $index) {
-                  <div class="bg-slate-100 p-4 border border-slate-300 shadow-sm rounded-lg transform rotate-[1deg] hover:rotate-0 transition-transform">
-                    <div class="h-3 w-1/3 bg-blue-600/30 rounded mb-2"></div>
-                    <div class="h-2 w-full bg-slate-300 rounded mb-1"></div>
-                    <div class="h-2 w-2/3 bg-slate-300 rounded"></div>
+              <div class="space-y-3 opacity-60 grayscale group hover:grayscale-0 transition-all duration-700">
+                @for (i of [1,2,3]; track $index) {
+                  <div class="bg-slate-100 p-3 border border-slate-300 shadow-sm rounded-lg transform rotate-[1deg] hover:rotate-0 transition-transform">
+                    <div class="h-2.5 w-1/3 bg-blue-600/30 rounded mb-1.5"></div>
+                    <div class="h-1.5 w-full bg-slate-300 rounded mb-1"></div>
+                    <div class="h-1.5 w-2/3 bg-slate-300 rounded"></div>
                   </div>
                 }
-                <div class="text-center pt-4">
-                  <span class="text-xs text-slate-500 font-medium italic">...and 1,270,000,000 more results</span>
+                <div class="text-center pt-2">
+                  <span class="text-[10px] text-slate-500 font-medium italic">...and 1,270,000,000 more results</span>
                 </div>
               </div>
             </div>
@@ -91,39 +91,39 @@ import { CommonModule } from '@angular/common';
               </div>
 
               <!-- Synthesized Answer Card -->
-              <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-3xl shadow-2xl relative overflow-hidden group">
+              <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-3xl shadow-2xl relative overflow-hidden group">
                 <!-- Animated Background Gradient -->
                 <div class="absolute inset-0 bg-gradient-to-br from-syntra-action-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 
-                <div class="flex items-center gap-3 mb-6 relative z-10">
-                  <div class="w-8 h-8 bg-syntra-action-primary rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(62,255,196,0.5)]">
-                    <svg class="w-5 h-5 text-syntra-bg-dark" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"></path></svg>
+                <div class="flex items-center gap-3 mb-4 relative z-10">
+                  <div class="w-7 h-7 bg-syntra-action-primary rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(62,255,196,0.5)]">
+                    <svg class="w-4 h-4 text-syntra-bg-dark" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"></path></svg>
                   </div>
-                  <span class="text-syntra-action-primary font-bold text-sm tracking-widest uppercase">Synthesized Result</span>
+                  <span class="text-syntra-action-primary font-bold text-xs tracking-widest uppercase">Synthesized Result</span>
                 </div>
 
-                <div class="space-y-4 relative z-10">
+                <div class="space-y-3 relative z-10">
                   <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
                     <div class="h-full bg-syntra-action-primary w-full animate-progress"></div>
                   </div>
-                  <div class="space-y-4">
-                    <p class="text-white text-xl font-medium leading-relaxed">
+                  <div class="space-y-3">
+                    <p class="text-white text-lg font-medium leading-relaxed">
                       "The optimal strategy is a unified AI representation that ensures consistency across all LLM models..."
                     </p>
-                    <div class="flex flex-col gap-2">
-                      <div class="h-2 w-full bg-white/10 rounded"></div>
-                      <div class="h-2 w-4/5 bg-white/10 rounded"></div>
-                      <div class="h-2 w-2/3 bg-white/10 rounded"></div>
+                    <div class="flex flex-col gap-1.5">
+                      <div class="h-1.5 w-full bg-white/10 rounded"></div>
+                      <div class="h-1.5 w-4/5 bg-white/10 rounded"></div>
+                      <div class="h-1.5 w-2/3 bg-white/10 rounded"></div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Source Citations -->
-                <div class="mt-8 flex gap-2 relative z-10">
-                  <div class="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[8px] text-white/60">S1</div>
-                  <div class="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[8px] text-white/60">S2</div>
-                  <div class="w-6 h-6 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[8px] text-white/60">S3</div>
-                  <span class="text-[10px] text-white/40 self-center ml-2">+ 12 verified sources</span>
+                <div class="mt-6 flex gap-2 relative z-10">
+                  <div class="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[7px] text-white/60">S1</div>
+                  <div class="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[7px] text-white/60">S2</div>
+                  <div class="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[7px] text-white/60">S3</div>
+                  <span class="text-[9px] text-white/40 self-center ml-2">+ 12 verified sources</span>
                 </div>
               </div>
             </div>
@@ -131,8 +131,7 @@ import { CommonModule } from '@angular/common';
         </div>
 
         <!-- Bottom Marquee -->
-        <!-- Bottom Marquee -->
-        <div class="h-16 border-t border-white/10 bg-syntra-bg-dark flex items-center overflow-hidden relative">
+        <div class="h-12 border-t border-white/10 bg-syntra-bg-dark flex items-center overflow-hidden relative">
           <!-- Fade edges -->
           <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-syntra-bg-dark to-transparent z-10"></div>
           <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-syntra-bg-dark to-transparent z-10"></div>
@@ -140,8 +139,8 @@ import { CommonModule } from '@angular/common';
           <div class="flex gap-16 animate-marquee whitespace-nowrap px-12">
             @for (i of [1,2,3,1,2,3,1,2,3,1,2,3]; track $index) {
               <div class="flex items-center gap-4">
-                <span class="text-white/10 font-black text-4xl italic select-none">{{$index + 1}}</span>
-                <span class="text-white/60 text-xl font-medium tracking-tight italic">
+                <span class="text-white/10 font-black text-3xl italic select-none">{{$index + 1}}</span>
+                <span class="text-white/60 text-lg font-medium tracking-tight italic">
                   "{{ t.translate('slide2.query' + (i)) }}"
                 </span>
               </div>
