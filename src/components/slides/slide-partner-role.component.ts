@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatIconModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-12">
+    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
       
       <!-- Background Neural Network SVG -->
       <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
@@ -27,7 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
 
       <div class="relative z-10 w-full max-w-7xl">
         <!-- Header -->
-        <div class="text-center mb-20 animate-fade-in">
+        <div class="text-center mb-8 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
             Strategic Integration
           </div>
@@ -42,7 +42,7 @@ import { MatIconModule } from '@angular/material/icon';
           <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-px bg-syntra-action-primary hidden md:block animate-pulse shadow-[0_0_10px_#3EFFC4]"></div>
           
           <!-- Partner Column -->
-          <div class="group relative p-12 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-slide-left overflow-hidden">
+          <div class="group relative p-8 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-slide-left overflow-hidden">
             <div class="absolute -top-20 -left-20 w-40 h-40 bg-syntra-action-primary/10 rounded-full blur-3xl"></div>
             
             <div class="relative z-10">
@@ -69,7 +69,7 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
 
           <!-- Syntra Column -->
-          <div class="group relative p-12 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-slide-right overflow-hidden">
+          <div class="group relative p-8 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-slide-right overflow-hidden">
             <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-syntra-action-primary/10 rounded-full blur-3xl"></div>
 
             <div class="relative z-10">

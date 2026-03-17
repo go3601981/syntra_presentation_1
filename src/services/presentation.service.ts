@@ -17,9 +17,9 @@ export class PresentationService {
   // Define which slides have a dark background
   readonly isCurrentSlideDark = computed(() => {
     // Indices of slides with dark backgrounds (0-indexed)
-    // 0: Title, 2: Brands, 5: Services, 6: How it works, 8: Market, 9: Partner Role, 
-    // 10: What they get, 11: Business Model, 12: Growth Path, 14: Next Steps, 15: Contact
-    const darkSlides = [0, 2, 5, 6, 8, 9, 10, 11, 12, 14, 15]; 
+    // 0: Title, 1: Shift, 2: Brands, 3: Opportunity, 5: Services, 6: How it works, 8: Market, 9: Partner Role, 
+    // 10: What they get, 11: Business Model, 12: Growth Path, 13: Why Syntra, 14: Next Steps, 15: Contact
+    const darkSlides = [0, 1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]; 
     return darkSlides.includes(this._currentSlideIndex());
   });
 

@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatIconModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-12">
+    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
       
       <!-- Background Neural Network SVG -->
       <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
@@ -23,7 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
 
       <div class="relative z-10 w-full max-w-5xl">
         <!-- Header -->
-        <div class="text-center mb-16 animate-fade-in">
+        <div class="text-center mb-8 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
             Ascension Protocol
           </div>
@@ -34,7 +34,7 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <!-- Ladder System (Ascension) -->
-        <div class="relative flex flex-col gap-12">
+        <div class="relative flex flex-col gap-6">
           
           <!-- Level 3: Regional Leader -->
           <div class="flex items-center gap-8 md:gap-16 animate-level-up self-end w-full md:w-[85%]" style="animation-delay: 1.2s">
@@ -100,7 +100,7 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <!-- Progress Indicator -->
-        <div class="mt-20 flex justify-center animate-fade-in" style="animation-delay: 2s">
+        <div class="mt-10 flex justify-center animate-fade-in" style="animation-delay: 2s">
           <div class="flex items-center gap-3 px-6 py-3 rounded-full bg-syntra-action-primary/5 border border-syntra-action-primary/20 backdrop-blur-xl">
             <div class="w-2 h-2 rounded-full bg-syntra-action-primary animate-ping"></div>
             <span class="text-[10px] font-black text-syntra-action-primary uppercase tracking-[0.3em]">Continuous Evolution Protocol</span>

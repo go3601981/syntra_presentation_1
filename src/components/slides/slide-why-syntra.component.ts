@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatIconModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-text-primary px-6 py-12">
+    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
       
       <!-- Subtle Motion Background -->
       <div class="absolute inset-0 pointer-events-none">
@@ -23,8 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
 
       <div class="relative z-10 w-full max-w-6xl">
         <!-- Header -->
-        <div class="mb-20 animate-fade-in">
-          <h2 class="text-6xl md:text-8xl font-bold tracking-tight mb-4 text-white drop-shadow-[0_0_15px_rgba(62,255,196,0.5)] uppercase">
+        <div class="mb-8 animate-fade-in">
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-4 text-white drop-shadow-[0_0_15px_rgba(62,255,196,0.5)] uppercase">
             {{ t.translate('slide14.title') }}
           </h2>
           <div class="h-1 w-32 bg-syntra-action-primary rounded-full shadow-[0_0_10px_#3EFFC4]"></div>
@@ -78,14 +78,14 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <!-- Vision Footer -->
-        <div class="mt-32 flex flex-col md:flex-row items-center justify-between gap-8 animate-fade-in" style="animation-delay: 1.5s">
+        <div class="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 animate-fade-in" style="animation-delay: 1.5s">
           <div class="flex items-center gap-6">
             <div class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center animate-spin-slow">
               <mat-icon class="text-syntra-action-primary">auto_awesome</mat-icon>
             </div>
             <span class="text-white/40 uppercase tracking-[0.3em] font-medium text-sm">The Future is Synthetic</span>
           </div>
-          <div class="text-white font-bold text-6xl md:text-8xl tracking-tight drop-shadow-[0_0_15px_rgba(62,255,196,0.3)] select-none uppercase">
+          <div class="text-white font-bold text-4xl md:text-6xl tracking-tight drop-shadow-[0_0_15px_rgba(62,255,196,0.3)] select-none uppercase">
             SYNTRA ADVISORY
           </div>
         </div>

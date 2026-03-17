@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
     <div class="min-h-full flex flex-col relative overflow-hidden bg-white">
       <!-- Background Split -->
       <div class="absolute inset-0 flex">
-        <div class="w-1/2 bg-slate-950 relative overflow-hidden border-r border-white/5">
+        <div class="w-1/2 bg-white relative overflow-hidden border-r border-black/5">
           <!-- Traditional Search Noise -->
-          <div class="absolute inset-0 opacity-[0.05] pointer-events-none" 
+          <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
                style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');">
           </div>
         </div>
@@ -31,18 +31,18 @@ import { CommonModule } from '@angular/common';
       <!-- Content Container -->
       <div class="relative z-10 flex-1 flex flex-col">
         <!-- Header -->
-        <div class="pt-24 pb-20 px-12 text-center animate-fade-in">
-          <h1 class="text-6xl md:text-8xl font-bold tracking-tight mb-4 text-white drop-shadow-[0_0_15px_rgba(62,255,196,0.3)] uppercase">
+        <div class="pt-10 pb-4 px-12 text-center animate-fade-in">
+          <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-2 uppercase" style="color: #3e785c">
             {{ t.translate('slide2.title') }}
           </h1>
-          <div class="h-1 w-32 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_10px_#3EFFC4] mb-8"></div>
-          <p class="text-2xl md:text-3xl text-white/70 font-light max-w-4xl mx-auto">
+          <div class="h-1 w-24 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_10px_#3EFFC4] mb-4"></div>
+          <p class="text-lg md:text-xl text-slate-600 font-medium max-w-4xl mx-auto">
             {{ t.translate('slide2.subtitle') }}
           </p>
         </div>
 
         <!-- Main Comparison -->
-        <div class="flex-1 flex items-center px-12 gap-12 pb-12">
+        <div class="flex-1 flex items-center px-12 gap-8 pb-6">
           <!-- Left: The Chaos -->
           <div class="flex-1 flex flex-col items-center justify-center animate-slide-left">
             <div class="w-full max-w-md space-y-6 relative">
@@ -131,7 +131,8 @@ import { CommonModule } from '@angular/common';
         </div>
 
         <!-- Bottom Marquee -->
-        <div class="h-28 border-t border-white/10 bg-syntra-bg-dark flex items-center overflow-hidden relative">
+        <!-- Bottom Marquee -->
+        <div class="h-16 border-t border-white/10 bg-syntra-bg-dark flex items-center overflow-hidden relative">
           <!-- Fade edges -->
           <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-syntra-bg-dark to-transparent z-10"></div>
           <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-syntra-bg-dark to-transparent z-10"></div>

@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatIconModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-12">
+    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-4">
       
       <!-- Background Neural Network SVG -->
       <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
@@ -23,29 +23,29 @@ import { MatIconModule } from '@angular/material/icon';
 
       <div class="relative z-10 w-full max-w-4xl">
         <!-- Header -->
-        <div class="text-center mb-16 animate-fade-in">
+        <div class="text-center mb-4 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
             Initiation Sequence
           </div>
-          <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase">
+          <h2 class="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
             {{ t.translate('slide15.title') }}
           </h2>
-          <div class="mt-6 w-24 h-1 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_15px_#3EFFC4]"></div>
+          <div class="mt-4 w-24 h-1 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_15px_#3EFFC4]"></div>
         </div>
 
         <!-- Steps List -->
-        <div class="space-y-6">
+        <div class="space-y-4">
           @for (step of steps; track step.id) {
             <div 
-              class="group relative flex items-center gap-8 p-8 bg-white/5 border border-white/10 rounded-[32px] transition-all duration-700 hover:bg-white/10 hover:border-syntra-action-primary/50 backdrop-blur-2xl animate-slide-in overflow-hidden"
+              class="group relative flex items-center gap-6 p-3 bg-white/5 border border-white/10 rounded-[24px] transition-all duration-700 hover:bg-white/10 hover:border-syntra-action-primary/50 backdrop-blur-2xl animate-slide-in overflow-hidden"
               [style.animation-delay]="step.id * 0.2 + 's'"
             >
               <!-- Animated Background Glow -->
               <div class="absolute -top-20 -left-20 w-40 h-40 bg-syntra-action-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
               <!-- Step Number / Icon -->
-              <div class="w-20 h-20 shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-syntra-action-primary group-hover:scale-110 transition-all duration-500 shadow-2xl">
-                <mat-icon class="text-white group-hover:text-syntra-bg-dark text-4xl">{{ step.icon }}</mat-icon>
+              <div class="w-16 h-16 shrink-0 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-syntra-action-primary group-hover:scale-110 transition-all duration-500 shadow-2xl">
+                <mat-icon class="text-white group-hover:text-syntra-bg-dark text-3xl">{{ step.icon }}</mat-icon>
               </div>
 
               <!-- Content -->
@@ -69,8 +69,8 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <!-- Final CTA Button -->
-        <div class="mt-20 text-center animate-fade-in" style="animation-delay: 1s">
-          <button class="group relative inline-flex items-center gap-6 px-12 py-6 bg-syntra-action-primary text-syntra-bg-dark rounded-full font-black text-2xl overflow-hidden shadow-[0_0_50px_rgba(62,255,196,0.3)] transition-all duration-500 hover:scale-105 active:scale-95">
+        <div class="mt-6 text-center animate-fade-in" style="animation-delay: 1s">
+          <button class="group relative inline-flex items-center gap-6 px-8 py-4 bg-syntra-action-primary text-syntra-bg-dark rounded-full font-black text-xl overflow-hidden shadow-[0_0_50px_rgba(62,255,196,0.3)] transition-all duration-500 hover:scale-105 active:scale-95">
             <!-- Animated Scanline -->
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-1000"></div>
             
@@ -79,7 +79,7 @@ import { MatIconModule } from '@angular/material/icon';
             <mat-icon class="group-hover:translate-x-3 transition-transform text-3xl">arrow_forward</mat-icon>
           </button>
           
-          <div class="mt-8 flex items-center justify-center gap-4">
+          <div class="mt-4 flex items-center justify-center gap-4">
             <div class="h-px w-12 bg-white/10"></div>
             <p class="text-[10px] text-white/30 font-bold uppercase tracking-[0.5em]">
               Limited Territories Available for 2026
