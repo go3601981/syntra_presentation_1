@@ -25,14 +25,14 @@ export class TranslationService {
     // Slide 1: Cover
     'slide1.title': { en: 'Syntra Advisory', de: 'Syntra Advisory', pt: 'Syntra Advisory', es: 'Syntra Advisory' },
     'slide1.subtitle': { 
-      en: 'AI Representation Strategy for the New Search Era', 
-      de: 'KI-Repräsentationsstrategie für die neue Suchära', 
+      en: 'Optimization System for the New AI Search Era', 
+      de: 'Optimierungssystem für die neue KI-Suchära.', 
       pt: 'Estratégia de Representação em IA para a Nova Era de Busca', 
       es: 'Estrategia de Representación en IA para la Nueva Era de Búsqueda' 
     },
     'slide1.opportunity': { 
-      en: 'Strategic Country Partner Opportunity', 
-      de: 'Strategische Länderpartner-Gelegenheit', 
+      en: 'GLOBAL SALES NETWORK FOR MAXIMUM MARKET LAUNCH', 
+      de: 'Globale Vertriebsgemeinschaft für maximale Marktdurchdringung.', 
       pt: 'Oportunidade para Parceiros Estratégicos por País', 
       es: 'Oportunidad para Socios Estratégicos por País' 
     },
