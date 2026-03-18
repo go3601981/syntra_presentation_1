@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
+import { LucideAngularModule, ArrowRight, Plus } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-shift',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
-    <div class="min-h-full flex flex-col relative overflow-hidden bg-white">
+    <div class="h-full flex flex-col relative overflow-hidden bg-white pb-24">
       <!-- Background Split -->
       <div class="absolute inset-0 flex">
         <div class="w-1/2 bg-white relative overflow-hidden border-r border-black/5">
@@ -31,12 +32,12 @@ import { CommonModule } from '@angular/common';
       <!-- Content Container -->
       <div class="relative z-10 flex-1 flex flex-col">
         <!-- Header -->
-        <div class="pt-6 pb-2 px-12 text-center animate-fade-in">
-          <h1 class="text-2xl md:text-4xl font-bold tracking-tight mb-1 uppercase" style="color: #3e785c">
+        <div class="pt-12 pb-4 px-12 text-center animate-fade-in">
+          <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-2 uppercase" style="color: #3e785c">
             {{ t.translate('slide2.title') }}
           </h1>
-          <div class="h-1 w-20 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_10px_#3EFFC4] mb-2"></div>
-          <p class="text-base md:text-lg text-slate-600 font-medium max-w-4xl mx-auto">
+          <div class="h-1.5 w-32 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_20px_#3EFFC4] mb-4"></div>
+          <p class="text-lg md:text-2xl text-slate-600 font-light max-w-4xl mx-auto">
             {{ t.translate('slide2.subtitle') }}
           </p>
         </div>
@@ -73,8 +74,8 @@ import { CommonModule } from '@angular/common';
           <div class="relative h-full flex items-center justify-center">
             <div class="h-[60%] w-[1px] bg-gradient-to-b from-transparent via-slate-300 to-transparent relative">
               <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div class="w-16 h-16 bg-syntra-action-primary rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(62,255,196,0.4)] animate-glow">
-                  <svg class="w-8 h-8 text-syntra-bg-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <div class="w-16 h-16 bg-syntra-action-primary/10 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(62,255,196,0.2)] animate-glow group hover:bg-syntra-action-primary transition-all">
+                  <lucide-icon [name]="ArrowRight" [size]="35" class="text-white/20 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
                 </div>
               </div>
             </div>
@@ -96,8 +97,8 @@ import { CommonModule } from '@angular/common';
                 <div class="absolute inset-0 bg-gradient-to-br from-syntra-action-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 
                 <div class="flex items-center gap-3 mb-4 relative z-10">
-                  <div class="w-7 h-7 bg-syntra-action-primary rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(62,255,196,0.5)]">
-                    <svg class="w-4 h-4 text-syntra-bg-dark" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"></path></svg>
+                  <div class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center border border-white/10 group-hover:bg-syntra-action-primary transition-all duration-500 shadow-lg group-hover:shadow-[0_0_15px_rgba(62,255,196,0.4)]">
+                    <lucide-icon [name]="Plus" [size]="17" class="text-white/20 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
                   </div>
                   <span class="text-syntra-action-primary font-bold text-xs tracking-widest uppercase">Synthesized Result</span>
                 </div>
@@ -127,24 +128,6 @@ import { CommonModule } from '@angular/common';
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Bottom Marquee -->
-        <div class="h-12 border-t border-white/10 bg-syntra-bg-dark flex items-center overflow-hidden relative">
-          <!-- Fade edges -->
-          <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-syntra-bg-dark to-transparent z-10"></div>
-          <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-syntra-bg-dark to-transparent z-10"></div>
-          
-          <div class="flex gap-16 animate-marquee whitespace-nowrap px-12">
-            @for (i of [1,2,3,1,2,3,1,2,3,1,2,3]; track $index) {
-              <div class="flex items-center gap-4">
-                <span class="text-white/10 font-black text-3xl italic select-none">{{$index + 1}}</span>
-                <span class="text-white/60 text-lg font-medium tracking-tight italic">
-                  "{{ t.translate('slide2.query' + (i)) }}"
-                </span>
-              </div>
-            }
           </div>
         </div>
       </div>
@@ -197,4 +180,6 @@ import { CommonModule } from '@angular/common';
 })
 export class SlideShiftComponent {
   t = inject(TranslationService);
+  readonly ArrowRight = ArrowRight;
+  readonly Plus = Plus;
 }

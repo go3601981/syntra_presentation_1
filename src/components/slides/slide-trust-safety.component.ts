@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, ShieldCheck, Handshake, Gauge, Shield } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-trust-safety',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-12 lg:py-4 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -28,9 +28,9 @@ import { MatIconModule } from '@angular/material/icon';
 
             <div class="space-y-4">
               @for (feature of safetyFeatures; track feature.title) {
-                <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
-                  <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                    <mat-icon class="text-sm">{{ feature.icon }}</mat-icon>
+                <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm group hover:border-emerald-200 transition-all">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <lucide-icon [name]="feature.icon" [size]="22" class="transition-colors group-hover:text-[#00FF9D]"></lucide-icon>
                   </div>
                   <div>
                     <h3 class="font-bold text-gray-900 text-sm mb-1">{{ feature.title }}</h3>
@@ -70,7 +70,6 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
 export class SlideTrustSafetyComponent {
@@ -78,7 +77,7 @@ export class SlideTrustSafetyComponent {
     { 
       title: 'Opt-in Networking', 
       description: 'Attendees must explicitly choose to be "Available for Meetings" in their profile settings.',
-      icon: 'verified_user'
+      icon: 'shield-check'
     },
     { 
       title: 'Mutual Consent', 
@@ -88,12 +87,12 @@ export class SlideTrustSafetyComponent {
     { 
       title: 'Request Rate Limiting', 
       description: 'Prevents spam by limiting the number of pending meeting requests a user can send.',
-      icon: 'speed'
+      icon: 'gauge'
     },
     { 
       title: 'Privacy Controls', 
       description: 'Users can block specific participants or report inappropriate behavior directly from the chat.',
-      icon: 'security'
+      icon: 'shield'
     }
   ];
 }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Users, UserCircle, Store, MessageSquare, BellRing, Hand, Lightbulb, Layout } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-entry-points',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-24 lg:py-12 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -28,11 +28,11 @@ import { MatIconModule } from '@angular/material/icon';
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               @for (point of entryPoints; track point.title) {
-                <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-indigo-200 transition-all">
-                  <div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
-                    <mat-icon class="text-sm">{{ point.icon }}</mat-icon>
+                <div class="flex items-center gap-3 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-indigo-200 transition-all duration-500 group">
+                  <div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500">
+                    <lucide-icon [name]="point.icon" [size]="26"></lucide-icon>
                   </div>
-                  <span class="font-bold text-gray-900 text-sm">{{ point.title }}</span>
+                  <span class="font-bold text-gray-900 text-sm group-hover:text-indigo-600 transition-colors">{{ point.title }}</span>
                 </div>
               }
             </div>
@@ -42,7 +42,7 @@ import { MatIconModule } from '@angular/material/icon';
             <!-- Proactive Prompt Example -->
             <div class="p-6 bg-indigo-50 rounded-[32px] border-2 border-indigo-200 shadow-xl relative overflow-hidden">
               <div class="absolute top-0 right-0 p-4">
-                <mat-icon class="text-indigo-200 text-4xl">tips_and_updates</mat-icon>
+                <lucide-icon [name]="Lightbulb" [size]="24" class="text-indigo-200"></lucide-icon>
               </div>
               
               <h3 class="text-[10px] font-bold text-indigo-600 uppercase tracking-widest mb-4">The Proactive Prompt</h3>
@@ -63,7 +63,7 @@ import { MatIconModule } from '@angular/material/icon';
             <!-- Design Principle -->
             <div class="p-5 bg-indigo-900 rounded-2xl shadow-xl text-white">
               <div class="flex items-center gap-2 mb-3">
-                <mat-icon class="text-indigo-400 text-sm">architecture</mat-icon>
+                <lucide-icon [name]="Layout" [size]="10" class="text-indigo-400"></lucide-icon>
                 <h4 class="text-indigo-400 text-[10px] font-bold uppercase tracking-widest">Design Principle</h4>
               </div>
               <p class="text-base font-light italic leading-snug">
@@ -77,16 +77,17 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
 export class SlideEntryPointsComponent {
+  readonly Lightbulb = Lightbulb;
+  readonly Layout = Layout;
   readonly entryPoints = [
-    { title: 'Participant List', icon: 'groups' },
-    { title: 'Attendee Profiles', icon: 'account_circle' },
-    { title: 'Exhibitor Profiles', icon: 'storefront' },
-    { title: 'Chat Conversations', icon: 'chat' },
-    { title: 'Proactive Prompts', icon: 'notifications_active' },
-    { title: 'Welcome Modals', icon: 'waving_hand' }
+    { title: 'Participant List', icon: Users },
+    { title: 'Attendee Profiles', icon: UserCircle },
+    { title: 'Exhibitor Profiles', icon: Store },
+    { title: 'Chat Conversations', icon: MessageSquare },
+    { title: 'Proactive Prompts', icon: BellRing },
+    { title: 'Welcome Modals', icon: Hand }
   ];
 }

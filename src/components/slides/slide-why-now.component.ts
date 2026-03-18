@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, History, Bolt } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-why-now',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-page px-6 py-12">
       
@@ -35,9 +35,9 @@ import { MatIconModule } from '@angular/material/icon';
             
             <!-- Past (Left) -->
             <div class="flex flex-col md:flex-row items-center md:items-start">
-              <div class="md:w-1/2 md:pr-16 text-center md:text-right animate-slide-left">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-syntra-bg-card border border-syntra-border-default mb-6 md:ml-auto">
-                  <mat-icon class="text-syntra-text-muted text-3xl">history</mat-icon>
+              <div class="md:w-1/2 md:pr-16 text-center md:text-right animate-slide-left group">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-syntra-bg-card border border-syntra-border-default mb-6 md:ml-auto hover:border-syntra-action-primary transition-all">
+                  <lucide-icon name="history" [size]="35" class="text-syntra-text-muted group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
                 </div>
                 <h3 class="text-2xl font-bold text-syntra-text-primary mb-4">
                   {{ t.translate('slide8.past_label') }}
@@ -60,9 +60,9 @@ import { MatIconModule } from '@angular/material/icon';
               <!-- Timeline Point -->
               <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-syntra-action-primary border-4 border-syntra-bg-page z-20 shadow-[0_0_15px_rgba(0,255,157,0.5)]"></div>
 
-              <div class="md:w-1/2 md:pl-16 text-center md:text-left animate-slide-right">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-syntra-action-primary text-white mb-6">
-                  <mat-icon class="text-3xl">bolt</mat-icon>
+              <div class="md:w-1/2 md:pl-16 text-center md:text-left animate-slide-right group">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-syntra-action-primary/10 border border-syntra-action-primary/30 mb-6 group-hover:bg-syntra-action-primary transition-all shadow-lg hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+                  <lucide-icon name="bolt" [size]="35" class="text-syntra-action-primary group-hover:text-white transition-colors"></lucide-icon>
                 </div>
                 <h3 class="text-2xl font-bold text-syntra-text-primary mb-4">
                   {{ t.translate('slide8.future_label') }}

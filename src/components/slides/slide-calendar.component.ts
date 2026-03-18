@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Calendar, Mail, CalendarCheck, History } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-calendar',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-24 lg:py-12 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -28,12 +28,12 @@ import { MatIconModule } from '@angular/material/icon';
 
             <div class="space-y-3">
               @for (capability of capabilities; track capability.title) {
-                <div class="flex items-start gap-3 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
-                  <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
-                    <mat-icon class="text-sm">{{ capability.icon }}</mat-icon>
+                <div class="flex items-start gap-3 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-blue-200 transition-all duration-500 group">
+                  <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                    <lucide-icon [name]="capability.icon" [size]="26"></lucide-icon>
                   </div>
                   <div>
-                    <h3 class="font-bold text-gray-900 mb-0.5 text-sm">{{ capability.title }}</h3>
+                    <h3 class="font-bold text-gray-900 mb-0.5 text-sm group-hover:text-blue-600 transition-colors">{{ capability.title }}</h3>
                     <p class="text-xs text-gray-500 leading-relaxed">{{ capability.description }}</p>
                   </div>
                 </div>
@@ -46,7 +46,7 @@ import { MatIconModule } from '@angular/material/icon';
             <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden transform lg:rotate-3 hover:rotate-0 transition-transform duration-500 max-w-md mx-auto">
               <div class="bg-blue-600 p-3 flex items-center justify-between text-white">
                 <div class="flex items-center gap-2">
-                  <mat-icon class="text-xs">calendar_month</mat-icon>
+                  <lucide-icon [name]="Calendar" [size]="9"></lucide-icon>
                   <span class="text-[10px] font-bold uppercase tracking-widest">Schedule Sync</span>
                 </div>
                 <div class="flex gap-1">
@@ -98,7 +98,6 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
     @keyframes bounce-slow {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
@@ -109,20 +108,21 @@ import { MatIconModule } from '@angular/material/icon';
   `]
 })
 export class SlideCalendarComponent {
+  readonly Calendar = Calendar;
   readonly capabilities = [
     { 
       title: 'Generate Calendar Invites', 
-      icon: 'mail', 
+      icon: Mail, 
       description: 'Automatically send .ics files or direct invites to Outlook, Google, and Apple calendars.' 
     },
     { 
       title: 'Select Date and Time', 
-      icon: 'event_available', 
+      icon: CalendarCheck, 
       description: 'Intuitive time-slot selection that respects time zones and event schedules.' 
     },
     { 
       title: 'Follow-up Meetings', 
-      icon: 'history_edu', 
+      icon: History, 
       description: 'The networking cycle continues with the ability to schedule post-event catch-ups.' 
     }
   ];

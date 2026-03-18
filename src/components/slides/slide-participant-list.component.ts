@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, UserSearch, Store, BadgeCheck, MessageSquare, Users, User, MessageCircle, CalendarCheck, ArrowDown } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-participant-list',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-12 lg:py-4 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -32,7 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
                 @for (action of actions; track action.title) {
                   <div class="p-3 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col items-center text-center group hover:bg-blue-50 hover:border-blue-100 transition-all">
                     <div class="w-8 h-8 rounded-xl bg-white text-blue-600 flex items-center justify-center mb-2 shadow-sm group-hover:scale-110 transition-transform">
-                      <mat-icon class="text-xs">{{ action.icon }}</mat-icon>
+                      <lucide-icon [name]="action.icon" [size]="17"></lucide-icon>
                     </div>
                     <h4 class="font-bold text-gray-900 text-[10px]">{{ action.title }}</h4>
                   </div>
@@ -56,7 +56,7 @@ import { MatIconModule } from '@angular/material/icon';
                 <!-- Flow Step 1 -->
                 <div class="w-full flex items-center gap-3 p-3 bg-blue-50 rounded-2xl border border-blue-100">
                   <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shrink-0">
-                    <mat-icon class="text-xs">groups</mat-icon>
+                    <lucide-icon [name]="Users" [size]="17"></lucide-icon>
                   </div>
                   <div>
                     <p class="text-[9px] font-bold text-blue-600 uppercase">Step 1</p>
@@ -64,12 +64,12 @@ import { MatIconModule } from '@angular/material/icon';
                   </div>
                 </div>
 
-                <mat-icon class="text-gray-300 text-xs">arrow_downward</mat-icon>
+                <lucide-icon [name]="ArrowDown" [size]="20" class="text-gray-300"></lucide-icon>
 
                 <!-- Flow Step 2 -->
                 <div class="w-full flex items-center gap-3 p-3 bg-white rounded-2xl border border-gray-100">
                   <div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
-                    <mat-icon class="text-xs">person</mat-icon>
+                    <lucide-icon [name]="User" [size]="17"></lucide-icon>
                   </div>
                   <div>
                     <p class="text-[9px] font-bold text-gray-400 uppercase">Step 2</p>
@@ -77,12 +77,12 @@ import { MatIconModule } from '@angular/material/icon';
                   </div>
                 </div>
 
-                <mat-icon class="text-gray-300 text-xs">arrow_downward</mat-icon>
+                <lucide-icon [name]="ArrowDown" [size]="20" class="text-gray-300"></lucide-icon>
 
                 <!-- Flow Step 3 -->
                 <div class="w-full flex items-center gap-3 p-3 bg-white rounded-2xl border border-gray-100">
                   <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                    <mat-icon class="text-xs">chat</mat-icon>
+                    <lucide-icon [name]="MessageCircle" [size]="17"></lucide-icon>
                   </div>
                   <div>
                     <p class="text-[9px] font-bold text-gray-400 uppercase">Step 3</p>
@@ -90,12 +90,12 @@ import { MatIconModule } from '@angular/material/icon';
                   </div>
                 </div>
 
-                <mat-icon class="text-gray-300 text-xs">arrow_downward</mat-icon>
+                <lucide-icon [name]="ArrowDown" [size]="20" class="text-gray-300"></lucide-icon>
 
                 <!-- Flow Step 4 -->
                 <div class="w-full flex items-center gap-3 p-3 bg-emerald-600 rounded-2xl shadow-lg shadow-emerald-200">
                   <div class="w-8 h-8 rounded-full bg-white/20 text-white flex items-center justify-center shrink-0">
-                    <mat-icon class="text-xs">event_available</mat-icon>
+                    <lucide-icon [name]="CalendarCheck" [size]="17"></lucide-icon>
                   </div>
                   <div>
                     <p class="text-[9px] font-bold text-emerald-200 uppercase">Step 4</p>
@@ -111,14 +111,19 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 20px; width: 20px; height: 20px; }
   `]
 })
 export class SlideParticipantListComponent {
+  readonly Users = Users;
+  readonly User = User;
+  readonly MessageCircle = MessageCircle;
+  readonly CalendarCheck = CalendarCheck;
+  readonly ArrowDown = ArrowDown;
+
   readonly actions = [
-    { title: 'Browse Attendees', icon: 'person_search' },
-    { title: 'Browse Exhibitors', icon: 'storefront' },
-    { title: 'View Profiles', icon: 'badge' },
-    { title: 'Start Chat', icon: 'forum' }
+    { title: 'Browse Attendees', icon: UserSearch },
+    { title: 'Browse Exhibitors', icon: Store },
+    { title: 'View Profiles', icon: BadgeCheck },
+    { title: 'Start Chat', icon: MessageSquare }
   ];
 }

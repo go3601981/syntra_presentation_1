@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, UserSearch, Sparkles, Clock, Brain } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-meeting-flow',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-24 lg:py-12 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -24,7 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
           <!-- Flow 1: Person-First -->
           <div class="p-6 bg-white rounded-[32px] border border-gray-100 shadow-sm">
             <h3 class="text-[10px] font-bold text-violet-600 uppercase tracking-widest mb-6 flex items-center gap-2">
-              <mat-icon class="text-sm">person_search</mat-icon>
+              <lucide-icon [name]="UserSearch" [size]="8"></lucide-icon>
               Flow A: Person-First (Discovery)
             </h3>
             <div class="space-y-4">
@@ -45,11 +45,11 @@ import { MatIconModule } from '@angular/material/icon';
           <!-- Flow 2: Time-First -->
           <div class="p-6 bg-violet-900 rounded-[32px] shadow-xl text-white relative overflow-hidden">
             <div class="absolute top-0 right-0 p-6">
-              <mat-icon class="text-violet-400 text-4xl opacity-20">auto_awesome</mat-icon>
+              <lucide-icon [name]="Sparkles" [size]="22" class="text-violet-400 opacity-20"></lucide-icon>
             </div>
             
             <h3 class="text-[10px] font-bold text-violet-400 uppercase tracking-widest mb-6 flex items-center gap-2">
-              <mat-icon class="text-sm">schedule</mat-icon>
+              <lucide-icon [name]="Clock" [size]="8"></lucide-icon>
               Flow B: Time-First (Disney-Style)
             </h3>
             <div class="space-y-4">
@@ -70,8 +70,8 @@ import { MatIconModule } from '@angular/material/icon';
 
         <div class="mt-10 p-6 bg-violet-50 rounded-3xl border border-violet-100 flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-violet-600 text-white flex items-center justify-center shadow-lg">
-              <mat-icon class="text-sm">psychology</mat-icon>
+            <div class=\"w-12 h-12 rounded-xl bg-violet-600 text-white flex items-center justify-center shadow-lg\">
+              <lucide-icon [name]=\"Brain\" [size]=\"26\"></lucide-icon>
             </div>
             <div>
               <h4 class="text-[10px] font-bold text-violet-600 uppercase tracking-widest">The Intelligence</h4>
@@ -87,10 +87,14 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
 export class SlideMeetingFlowComponent {
+  readonly UserSearch = UserSearch;
+  readonly Sparkles = Sparkles;
+  readonly Clock = Clock;
+  readonly Brain = Brain;
+
   readonly personFlow = [
     { title: 'Discover Person', description: 'Find someone in the participant list' },
     { title: 'Initiate Chat', description: 'Break the ice with a quick message' },

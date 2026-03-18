@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, ShoppingCart, Cloud, Stethoscope, Landmark, User } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-market',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-12">
       
@@ -47,8 +47,8 @@ import { MatIconModule } from '@angular/material/icon';
               <div class="absolute inset-0 bg-syntra-action-primary/10 opacity-40 group-hover:opacity-100 transition-opacity duration-700"></div>
               
               <!-- Icon Container -->
-              <div class="relative z-10 w-20 h-20 rounded-2xl bg-syntra-bg-dark border border-white/10 flex items-center justify-center mb-6 group-hover:bg-syntra-action-primary group-hover:text-syntra-bg-dark transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
-                <mat-icon class="text-4xl">{{ industry.icon }}</mat-icon>
+              <div class="relative z-10 w-20 h-20 rounded-2xl bg-syntra-bg-dark border border-white/10 flex items-center justify-center mb-6 transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+                <lucide-icon [name]="industry.icon" [size]="44" class="text-gray-500 group-hover:text-syntra-action-primary transition-colors duration-500"></lucide-icon>
               </div>
 
               <!-- Content -->
@@ -114,10 +114,10 @@ export class SlideMarketComponent {
   t = inject(TranslationService);
 
   industries = [
-    { id: 1, icon: 'shopping_cart' },
-    { id: 2, icon: 'cloud_queue' },
-    { id: 3, icon: 'medical_services' },
-    { id: 4, icon: 'account_balance' },
-    { id: 5, icon: 'person_pin' }
+    { id: 1, icon: 'shopping-cart' },
+    { id: 2, icon: 'cloud' },
+    { id: 3, icon: 'stethoscope' },
+    { id: 4, icon: 'landmark' },
+    { id: 5, icon: 'user' }
   ];
 }

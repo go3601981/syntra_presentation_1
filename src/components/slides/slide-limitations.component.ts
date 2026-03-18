@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Calendar, Shuffle, Sparkles, Waves, Lightbulb } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-limitations',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-12 lg:py-4 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -30,7 +30,7 @@ import { MatIconModule } from '@angular/material/icon';
               @for (feature of hybridFeatures; track feature.title) {
                 <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-orange-200 transition-all group">
                   <div class="w-9 h-9 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors shrink-0">
-                    <mat-icon class="text-sm">{{ feature.icon }}</mat-icon>
+                    <lucide-icon [name]="feature.icon" [size]="20"></lucide-icon>
                   </div>
                   <div>
                     <h3 class="font-bold text-gray-900 text-sm mb-0.5">{{ feature.title }}</h3>
@@ -48,7 +48,7 @@ import { MatIconModule } from '@angular/material/icon';
               <div class="relative z-10">
                 <div class="flex items-center gap-3 mb-6">
                   <div class="w-7 h-7 rounded-full bg-orange-500/20 flex items-center justify-center">
-                    <mat-icon class="text-orange-400 text-[10px]">lightbulb</mat-icon>
+                    <lucide-icon [name]="Lightbulb" [size]="15" class="text-orange-400"></lucide-icon>
                   </div>
                   <h4 class="text-orange-400 text-[10px] font-bold uppercase tracking-[0.2em]">The Vision</h4>
                 </div>
@@ -71,30 +71,30 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
 export class SlideLimitationsComponent {
+  readonly Lightbulb = Lightbulb;
   readonly hybridFeatures = [
     { 
       title: 'Organizer-Blocked Time', 
       description: 'Support for predefined networking windows set by the event organizer.',
-      icon: 'calendar_today'
+      icon: Calendar
     },
     { 
       title: 'Fluid Coordination', 
       description: 'Attendees can easily find and book slots within those blocks.',
-      icon: 'shuffle'
+      icon: Shuffle
     },
     { 
       title: 'Reduced Operational Burden', 
       description: 'Self-service scheduling reduces the need for manual matchmaking.',
-      icon: 'auto_awesome'
+      icon: Sparkles
     },
     { 
       title: 'Natural Flow', 
       description: 'Meetings adapt to the real-time rhythm of the event.',
-      icon: 'waves'
+      icon: Waves
     }
   ];
 }

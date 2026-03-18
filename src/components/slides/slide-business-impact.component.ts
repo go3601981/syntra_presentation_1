@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Handshake, TrendingUp, CheckCircle, Pointer } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-business-impact',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-24 lg:py-12 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -23,11 +23,11 @@ import { MatIconModule } from '@angular/material/icon';
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             @for (benefit of benefits; track benefit.title) {
-              <div class="p-6 bg-white rounded-3xl border border-gray-100 shadow-sm hover:border-emerald-200 transition-colors group">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                  <mat-icon class="text-sm">{{ benefit.icon }}</mat-icon>
+              <div class="p-6 bg-white rounded-3xl border border-gray-100 shadow-sm hover:border-emerald-200 transition-all duration-500 group">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-500">
+                  <lucide-icon [name]="benefit.icon" [size]="26"></lucide-icon>
                 </div>
-                <h3 class="font-bold text-gray-900 mb-1 text-sm">{{ benefit.title }}</h3>
+                <h3 class="font-bold text-gray-900 mb-1 text-sm group-hover:text-emerald-600 transition-colors">{{ benefit.title }}</h3>
                 <p class="text-xs text-gray-500 leading-relaxed">{{ benefit.description }}</p>
               </div>
             }
@@ -63,29 +63,28 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
 export class SlideBusinessImpactComponent {
   readonly benefits = [
     { 
       title: 'Meaningful Connections', 
-      icon: 'handshake', 
+      icon: Handshake, 
       description: 'Moving beyond badge scans to actual professional relationships.' 
     },
     { 
       title: 'Exhibitor ROI', 
-      icon: 'trending_up', 
+      icon: TrendingUp, 
       description: 'Increased interactions leading to higher quality leads and satisfaction.' 
     },
     { 
       title: 'Stronger Outcomes', 
-      icon: 'verified', 
+      icon: CheckCircle, 
       description: 'Measurable networking success that justifies event attendance.' 
     },
     { 
       title: 'App Engagement', 
-      icon: 'touch_app', 
+      icon: Pointer, 
       description: 'Higher daily active users as the app becomes central to the event experience.' 
     }
   ];

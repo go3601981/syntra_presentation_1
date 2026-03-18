@@ -312,6 +312,11 @@ export class TranslationService {
     'slide12.item2_desc': { en: 'Exclusive regional focus and protection.', de: 'Exklusiver regionaler Fokus und Schutz.', pt: 'Foco e proteção regional exclusiva.', es: 'Enfoque y protección regional exclusiva.' },
     'slide12.item3_title': { en: 'Growth Incentives', de: 'Wachstumsanreize', pt: 'Incentivos ao Crescimento', es: 'Incentivos al Crecimiento' },
     'slide12.item3_desc': { en: 'Rewards for scaling and performance.', de: 'Belohnungen für Skalierung und Leistung.', pt: 'Recompensas por escalonamento e desempenho.', es: 'Recompensas por escalamiento y desempeño.' },
+    'slide12.calc_title': { en: 'Revenue Projection', de: 'Umsatzprognose', pt: 'Projeção de Receita', es: 'Proyección de Ingresos' },
+    'slide12.calc_subtitle': { en: 'Projection Tool', de: 'Prognose-Tool', pt: 'Ferramenta de Projeção', es: 'Herramienta de Proyección' },
+    'slide12.calc_volume': { en: 'Monthly Market Volume', de: 'Monatliches Marktvolumen', pt: 'Volume de Mercado Mensal', es: 'Volumen de Mercado Mensual' },
+    'slide12.calc_partner': { en: 'Partner', de: 'Partner', pt: 'Parceiro', es: 'Socio' },
+    'slide12.calc_syntra': { en: 'Syntra', de: 'Syntra', pt: 'Syntra', es: 'Syntra' },
 
     // Slide 13: Growth Path
     'slide13.title': { 
@@ -332,6 +337,12 @@ export class TranslationService {
     'slide13.level2_desc': { en: 'Consistent results and expanded service portfolio.', de: 'Konsistente Ergebnisse und erweitertes Serviceportfolio.', pt: 'Resultados consistentes e portfólio de serviços expandido.', es: 'Resultados consistentes y portafolio de servicios ampliado.' },
     'slide13.level3_title': { en: 'Regional Leader', de: 'Regionaler Leiter', pt: 'Líder Regional', es: 'Líder Regional' },
     'slide13.level3_desc': { en: 'Strategic territory management and leadership.', de: 'Strategisches Gebietsmanagement und Führung.', pt: 'Gestão estratégica de território e liderança.', es: 'Gestión estratégica de territorio y liderazgo.' },
+    'slide13.detail_l1_title': { en: 'Entry Requirements & Benefits', de: 'Einstiegsvoraussetzungen & Vorteile', pt: 'Requisitos de Entrada e Benefícios', es: 'Requisitos de Entrada y Beneficios' },
+    'slide13.detail_l1_desc': { en: 'Start with 30% revenue share, full access to Syntra AI Audit tools, and basic training.', de: 'Beginnen Sie mit 30 % Umsatzbeteiligung, vollem Zugriff auf Syntra AI Audit-Tools und Basisschulung.', pt: 'Comece com 30% de participação na receita, acesso total às ferramentas Syntra AI Audit e treinamento básico.', es: 'Comience con una participación en los ingresos del 30%, acceso total a las herramientas de auditoría de IA de Syntra y capacitación básica.' },
+    'slide13.detail_l2_title': { en: 'Performance Milestones', de: 'Leistungsmeilensteine', pt: 'Marcos de Desempenho', es: 'Hitos de Desempeño' },
+    'slide13.detail_l2_desc': { en: 'Reach 40% share after €50k revenue, unlocked dedicated support, and advanced AI strategy training.', de: 'Erreichen Sie 40 % Anteil nach 50.000 € Umsatz, freigeschaltetem dediziertem Support und fortgeschrittener KI-Strategieschulung.', pt: 'Alcance 40% de participação após € 50 mil de receita, suporte dedicado desbloqueado e treinamento avançado em estratégia de IA.', es: 'Alcance una participación del 40% después de 50.000 € de ingresos, soporte dedicado desbloqueado y capacitación avanzada en estrategia de IA.' },
+    'slide13.detail_l3_title': { en: 'Strategic Leadership Privileges', de: 'Strategische Führungsprivilegien', pt: 'Privilégios de Liderança Estratégica', es: 'Privilegios de Liderazgo Estratégico' },
+    'slide13.detail_l3_desc': { en: 'Maximum 50% share, exclusive territory rights, and a seat on the Syntra Partner Advisory Board.', de: 'Maximal 50 % Anteil, exklusive Gebietsrechte und ein Sitz im Syntra Partner Advisory Board.', pt: 'Participação máxima de 50%, direitos territoriais exclusivos e um assento no Conselho Consultivo de Parceiros da Syntra.', es: 'Participación máxima del 50%, derechos territoriais exclusivos y un asiento en la Junta Asesora de Socios de Syntra.' },
 
     // Slide 14: Why Syntra
     'slide14.title': { 

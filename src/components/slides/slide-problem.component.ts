@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-12">
+    <div class="h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
       <!-- Digital Noise / Static Background -->
       <div class="absolute inset-0 opacity-10 pointer-events-none bg-noise"></div>
       
@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
       
       <div class="relative z-10 w-full max-w-5xl">
         <!-- Header with Glitch Effect -->
-        <div class="text-center mb-20">
+        <div class="text-center mb-12">
           <div class="inline-block px-4 py-1 border border-red-600/50 rounded text-red-500 text-xs font-bold tracking-widest uppercase mb-6 animate-glitch-text">
             {{ t.translate('slide3.warning') }}
           </div>
@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
         </div>
 
         <!-- Disappearing Logos / Noise Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center opacity-70">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 items-center justify-items-center opacity-70">
           @for (logo of logos; track $index) {
             <div class="relative group">
               <!-- Logo Placeholder -->

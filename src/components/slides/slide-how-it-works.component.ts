@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Search, ArrowLeftRight, Lightbulb, Cpu, Eye } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-how-it-works',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-12">
+    <div class="h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
       
       <!-- Background Grid & Noise -->
       <div class="absolute inset-0 opacity-[0.03] pointer-events-none" 
@@ -17,7 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 
       <div class="relative z-10 w-full max-w-7xl">
         <!-- Header -->
-        <div class="text-center mb-24 animate-fade-in">
+        <div class="text-center mb-12 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
             Operational Protocol
           </div>
@@ -47,8 +47,8 @@ import { MatIconModule } from '@angular/material/icon';
                   <!-- Pulse Ring -->
                   <div class="absolute inset-0 rounded-full border border-syntra-action-primary/50 animate-ping opacity-0 group-hover:opacity-100"></div>
                   
-                  <div class="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-syntra-action-primary group-hover:text-syntra-bg-dark transition-all duration-700">
-                    <mat-icon class="text-4xl">{{ step.icon }}</mat-icon>
+                  <div class="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center transition-all duration-700">
+                    <lucide-icon [name]="step.icon" [size]="44" class="text-gray-500 group-hover:text-syntra-action-primary transition-colors duration-500"></lucide-icon>
                   </div>
                   
                   <!-- Step Number Badge (Technical) -->
@@ -111,9 +111,9 @@ export class SlideHowItWorksComponent {
 
   steps = [
     { id: 1, icon: 'search', key: 'audit' },
-    { id: 2, icon: 'compare_arrows', key: 'gap' },
+    { id: 2, icon: 'arrow-left-right', key: 'gap' },
     { id: 3, icon: 'lightbulb', key: 'strategy' },
-    { id: 4, icon: 'settings_input_component', key: 'execution' },
-    { id: 5, icon: 'visibility', key: 'monitoring' }
+    { id: 4, icon: 'cpu', key: 'execution' },
+    { id: 5, icon: 'eye', key: 'monitoring' }
   ];
 }

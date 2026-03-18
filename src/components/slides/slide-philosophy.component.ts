@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, ShieldCheck, UserPlus, Lightbulb, Brain, MousePointer2, Wand2 } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-philosophy',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-12 lg:py-4 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -28,7 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
                 "We don't just provide tools; we <span class="font-bold">proactively guide</span> attendees to the right connections at the right time."
               </h3>
               <div class="flex items-center gap-2 text-blue-100 text-xs font-medium">
-                <mat-icon class="text-xs">verified</mat-icon>
+                <lucide-icon name="shield-check" [size]="6" class="text-white/40 hover:text-[#00FF9D] transition-colors"></lucide-icon>
                 <span>The Syntra Advisory Way</span>
               </div>
             </div>
@@ -43,8 +43,8 @@ import { MatIconModule } from '@angular/material/icon';
           <div class="grid grid-cols-2 gap-3">
             @for (pillar of pillars; track pillar.label) {
               <div class="p-5 bg-white rounded-2xl border border-gray-100 shadow-sm hover:border-blue-200 hover:shadow-md transition-all group">
-                <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <mat-icon class="text-sm">{{ pillar.icon }}</mat-icon>
+                <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors">
+                  <lucide-icon [name]="pillar.icon" [size]="22" class="text-gray-400 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
                 </div>
                 <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">{{ pillar.label }}</h4>
                 <p class="text-base font-bold text-gray-900">{{ pillar.text }}</p>
@@ -53,9 +53,9 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
         </div>
 
-        <div class="mt-10 p-5 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col md:flex-row items-center gap-4">
-          <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-blue-600 shrink-0">
-            <mat-icon class="text-sm">auto_fix_high</mat-icon>
+        <div class="mt-10 p-5 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col md:flex-row items-center gap-4 group">
+          <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors">
+            <lucide-icon name="wand-2" [size]="22" class="text-gray-400 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
           </div>
           <p class="text-gray-600 text-sm text-center md:text-left">
             We "spoon-feed" high-value recommendations during free windows, making it <span class="font-semibold text-gray-900">effortless</span> for even the most hesitant attendees to network.
@@ -66,14 +66,13 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
 export class SlidePhilosophyComponent {
   readonly pillars = [
-    { label: 'Agency', text: 'Attendee-led', icon: 'person_add' },
-    { label: 'Guidance', text: 'Proactive prompts', icon: 'tips_and_updates' },
-    { label: 'Intelligence', text: 'Smart matching', icon: 'psychology' },
-    { label: 'Simplicity', text: 'One-tap booking', icon: 'touch_app' }
+    { label: 'Agency', text: 'Attendee-led', icon: 'user-plus' },
+    { label: 'Guidance', text: 'Proactive prompts', icon: 'lightbulb' },
+    { label: 'Intelligence', text: 'Smart matching', icon: 'brain' },
+    { label: 'Simplicity', text: 'One-tap booking', icon: 'mouse-pointer-2' }
   ];
 }

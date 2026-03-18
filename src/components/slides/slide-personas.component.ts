@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, TrendingUp, Zap, Store, Brain } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-personas',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-12 lg:py-4 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -23,8 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           @for (persona of personas; track persona.name) {
             <div class="p-6 bg-white rounded-3xl border border-gray-100 shadow-sm hover:border-blue-200 hover:shadow-md transition-all group">
-              <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                <mat-icon class="text-2xl">{{ persona.icon }}</mat-icon>
+              <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                <lucide-icon [name]="persona.icon" [size]="30" class="text-gray-400 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
               </div>
               
               <h3 class="text-lg font-bold text-gray-900 mb-2">{{ persona.name }}</h3>
@@ -44,9 +44,9 @@ import { MatIconModule } from '@angular/material/icon';
           }
         </div>
 
-        <div class="mt-10 p-5 bg-slate-900 rounded-2xl text-white flex items-center gap-4">
-          <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0">
-            <mat-icon class="text-blue-400 text-sm">psychology</mat-icon>
+        <div class="mt-10 p-5 bg-slate-900 rounded-2xl text-white flex items-center gap-4 group">
+          <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors">
+            <lucide-icon name="brain" [size]="22" class="text-blue-400 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
           </div>
           <p class="text-sm font-light leading-relaxed">
             By understanding these distinct needs, we ensure the platform is <span class="text-blue-400 font-semibold">flexible enough</span> for power users while remaining <span class="text-blue-400 font-semibold">approachable</span> for spontaneous networkers.
@@ -57,7 +57,6 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 28px; width: 28px; height: 28px; }
   `]
 })
 export class SlidePersonasComponent {
@@ -65,21 +64,21 @@ export class SlidePersonasComponent {
     { 
       name: 'The Power Networker', 
       role: 'Sales Executive',
-      icon: 'trending_up',
+      icon: 'trending-up',
       need: 'Needs to schedule 20+ meetings and requires a clean calendar view to avoid overlaps.',
       quote: 'I need to maximize every minute of this event with high-value leads.'
     },
     { 
       name: 'The Spontaneous Attendee', 
       role: 'Software Engineer',
-      icon: 'bolt',
+      icon: 'zap',
       need: 'Needs low-friction ways to meet people they just chatted with or saw in a session.',
       quote: 'That session was great! Let\'s grab coffee and talk about it now.'
     },
     { 
       name: 'The Strategic Exhibitor', 
       role: 'Booth Manager',
-      icon: 'storefront',
+      icon: 'store',
       need: 'Needs to invite high-value leads discovered via the Participant List to their booth.',
       quote: 'I want to invite the right people to our booth for a private demo.'
     }

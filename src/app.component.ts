@@ -50,7 +50,7 @@ import { SlideClosingComponent } from './components/slides/slide-closing.compone
     <main 
       #mainContainer 
       tabindex="0" 
-      class="w-full h-screen bg-syntra-bg-page overflow-y-auto relative pb-24 lg:pb-20 outline-none"
+      class="w-full h-screen bg-syntra-bg-page overflow-y-auto relative outline-none"
     >
       
       @switch (presentation.currentSlideIndex()) {
@@ -150,12 +150,20 @@ import { SlideClosingComponent } from './components/slides/slide-closing.compone
   `,
   styles: [`
     .animate-fade-in {
-      animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: slideFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
     
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes slideFadeIn {
+      0% { 
+        opacity: 0; 
+        transform: scale(0.98) translateY(20px);
+        filter: blur(10px);
+      }
+      100% { 
+        opacity: 1; 
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+      }
     }
   `]
 })

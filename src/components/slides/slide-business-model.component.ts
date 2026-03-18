@@ -1,17 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, PieChart, Globe, TrendingUp } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-business-model',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
+    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 pt-8 pb-24">
       
       <!-- Background Neural Network SVG -->
-      <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+      <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <svg class="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
           <circle cx="500" cy="500" r="450" stroke="#3EFFC4" stroke-width="0.2" fill="none" class="animate-spin-slow" />
           <circle cx="500" cy="500" r="350" stroke="#3EFFC4" stroke-width="0.2" fill="none" class="animate-spin-slow-reverse" />
@@ -23,7 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
 
       <div class="relative z-10 w-full max-w-7xl">
         <!-- Header -->
-        <div class="text-center mb-8 animate-fade-in">
+        <div class="text-center mb-16 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
             Economic Architecture
           </div>
@@ -33,19 +33,15 @@ import { MatIconModule } from '@angular/material/icon';
           <div class="mt-6 w-24 h-1 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_15px_#3EFFC4]"></div>
         </div>
 
-        <!-- Model Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Model Grid (Bento Style) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Revenue Sharing -->
-          <div class="group relative p-6 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-fade-in-up flex flex-col items-center text-center overflow-hidden" style="animation-delay: 0.2s">
+          <div class="group relative p-8 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-fade-in-up flex flex-col items-center text-center overflow-hidden" style="animation-delay: 0.2s">
             <div class="absolute -top-20 -left-20 w-40 h-40 bg-syntra-action-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             
-            <div class="w-32 h-32 mb-8 relative flex items-center justify-center">
-              <svg viewBox="0 0 100 100" class="w-full h-full transform -rotate-90">
-                <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
-                <circle cx="50" cy="50" r="45" fill="none" stroke="#3EFFC4" stroke-width="4" stroke-dasharray="212" stroke-dashoffset="70" class="animate-draw-circle shadow-[0_0_10px_#3EFFC4]"/>
-              </svg>
-              <mat-icon class="absolute text-white text-4xl group-hover:text-syntra-action-primary transition-colors">pie_chart</mat-icon>
+            <div class="w-24 h-24 mb-8 relative flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:bg-syntra-action-primary transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+              <lucide-icon name="pie-chart" [size]="44" class="text-white/20 group-hover:text-syntra-bg-dark transition-colors duration-500"></lucide-icon>
             </div>
             <h3 class="text-2xl font-black text-white mb-4 group-hover:text-syntra-action-primary transition-colors duration-500 tracking-tight uppercase">
               {{ t.translate('slide12.item1_title') }}
@@ -56,17 +52,11 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
 
           <!-- Territory Model -->
-          <div class="group relative p-6 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-fade-in-up flex flex-col items-center text-center overflow-hidden" style="animation-delay: 0.4s">
+          <div class="group relative p-8 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-fade-in-up flex flex-col items-center text-center overflow-hidden" style="animation-delay: 0.4s">
             <div class="absolute -top-20 -left-20 w-40 h-40 bg-syntra-action-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-            <div class="w-32 h-32 mb-8 relative flex items-center justify-center">
-              <div class="w-24 h-24 grid grid-cols-2 gap-2">
-                <div class="border border-white/20 rounded-lg"></div>
-                <div class="bg-syntra-action-primary rounded-lg shadow-[0_0_15px_#3EFFC4] animate-pulse"></div>
-                <div class="border border-white/20 rounded-lg"></div>
-                <div class="border border-white/20 rounded-lg"></div>
-              </div>
-              <mat-icon class="absolute text-white/20 text-4xl">public</mat-icon>
+            <div class="w-24 h-24 mb-8 relative flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:bg-syntra-action-primary transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+              <lucide-icon name="globe" [size]="44" class="text-white/20 group-hover:text-syntra-bg-dark transition-colors duration-500"></lucide-icon>
             </div>
             <h3 class="text-2xl font-black text-white mb-4 group-hover:text-syntra-action-primary transition-colors duration-500 tracking-tight uppercase">
               {{ t.translate('slide12.item2_title') }}
@@ -77,16 +67,11 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
 
           <!-- Growth Incentives -->
-          <div class="group relative p-6 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-fade-in-up flex flex-col items-center text-center overflow-hidden" style="animation-delay: 0.6s">
+          <div class="group relative p-8 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-fade-in-up flex flex-col items-center text-center overflow-hidden" style="animation-delay: 0.6s">
             <div class="absolute -top-20 -left-20 w-40 h-40 bg-syntra-action-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-            <div class="w-32 h-32 mb-8 relative flex items-center justify-center">
-              <div class="flex items-end gap-2 h-16">
-                <div class="w-5 h-6 bg-white/10 rounded-t-lg"></div>
-                <div class="w-5 h-10 bg-white/10 rounded-t-lg"></div>
-                <div class="w-5 h-16 bg-syntra-action-primary rounded-t-lg shadow-[0_0_15px_#3EFFC4] animate-bounce-slow"></div>
-              </div>
-              <mat-icon class="absolute -top-4 right-4 text-syntra-action-primary text-2xl animate-pulse">trending_up</mat-icon>
+            <div class="w-24 h-24 mb-8 relative flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 group-hover:bg-syntra-action-primary transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+              <lucide-icon name="trending-up" [size]="44" class="text-white/20 group-hover:text-syntra-bg-dark transition-colors duration-500"></lucide-icon>
             </div>
             <h3 class="text-2xl font-black text-white mb-4 group-hover:text-syntra-action-primary transition-colors duration-500 tracking-tight uppercase">
               {{ t.translate('slide12.item3_title') }}
@@ -99,7 +84,7 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <!-- Professional Note -->
-        <div class="mt-12 pt-8 border-t border-white/10 text-center animate-fade-in" style="animation-delay: 1s">
+        <div class="mt-16 pt-8 border-t border-white/10 text-center animate-fade-in" style="animation-delay: 1s">
           <p class="text-[10px] text-white/30 uppercase tracking-[0.5em] font-bold">
             {{ t.translate('slide12.subtitle') }}
           </p>
@@ -158,4 +143,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class SlideBusinessModelComponent {
   t = inject(TranslationService);
+  readonly PieChart = PieChart;
+  readonly Globe = Globe;
+  readonly TrendingUp = TrendingUp;
 }

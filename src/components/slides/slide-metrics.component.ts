@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Network, TrendingUp, Smile } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-metrics',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-8 lg:py-2 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -25,8 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
             <div class="p-6 bg-white rounded-[24px] border border-gray-100 shadow-sm relative overflow-hidden group hover:border-blue-200 transition-all">
               <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-full -mr-12 -mt-12 group-hover:bg-blue-600/10 transition-colors"></div>
               
-              <div class="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-                <mat-icon class="text-xl">{{ metric.icon }}</mat-icon>
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                <lucide-icon [name]=\"metric.icon\" [size]=\"26\"></lucide-icon>
               </div>
               
               <h3 class="text-base font-bold text-gray-900 mb-1">{{ metric.title }}</h3>
@@ -65,26 +65,25 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
 export class SlideMetricsComponent {
   readonly metrics = [
     { 
       title: 'Meeting Density', 
-      icon: 'hub',
+      icon: Network,
       description: 'Total meetings requested vs. meetings completed across the event.',
       outcome: 'High engagement and successful coordination.'
     },
     { 
       title: 'Engagement Lift', 
-      icon: 'trending_up',
+      icon: TrendingUp,
       description: 'Increase in Daily Active Users (DAU) as the app becomes a coordination tool.',
       outcome: 'App becomes central to the event experience.'
     },
     { 
       title: 'Post-Event Sentiment', 
-      icon: 'sentiment_satisfied',
+      icon: Smile,
       description: 'NPS scores specifically related to "Networking Quality" and connections made.',
       outcome: 'Justifies future attendance and sponsorship.'
     }

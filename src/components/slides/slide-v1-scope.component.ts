@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Rocket, Sparkles, Check } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-v1-scope',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-24 lg:py-12 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -22,21 +22,21 @@ import { MatIconModule } from '@angular/material/icon';
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <!-- V1 Scope -->
-          <div class="bg-white p-8 rounded-[32px] border border-indigo-100 shadow-xl shadow-indigo-500/5 relative overflow-hidden">
+          <div class="bg-white p-8 rounded-[32px] border border-indigo-100 shadow-xl shadow-indigo-500/5 relative overflow-hidden group hover:border-indigo-300 transition-all">
             <div class="absolute top-0 right-0 bg-indigo-600 text-white px-4 py-1.5 rounded-bl-2xl text-[9px] font-bold uppercase tracking-widest">
               Phase 1
             </div>
             
             <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <mat-icon class="text-indigo-600 text-lg">rocket_launch</mat-icon>
+              <lucide-icon name="rocket" [size]="11" class="text-indigo-600 transition-colors group-hover:text-[#00FF9D]"></lucide-icon>
               V1 Core Scope
             </h3>
             
             <div class="space-y-4">
               @for (item of v1Items; track item.title) {
-                <div class="flex items-start gap-3">
-                  <div class="w-7 h-7 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-                    <mat-icon class="text-[10px]">check</mat-icon>
+                <div class="flex items-start gap-3 group/item">
+                  <div class="w-7 h-7 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-colors">
+                    <lucide-icon name="check" [size]="15" class="transition-colors group-hover/item:text-[#00FF9D]"></lucide-icon>
                   </div>
                   <div>
                     <h4 class="font-bold text-gray-900 text-xs">{{ item.title }}</h4>
@@ -48,20 +48,20 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
 
           <!-- Future Evolution -->
-          <div class="bg-slate-900 p-8 rounded-[32px] text-white relative overflow-hidden">
+          <div class="bg-slate-900 p-8 rounded-[32px] text-white relative overflow-hidden group hover:border-emerald-500/30 border border-transparent transition-all">
             <div class="absolute top-0 right-0 bg-emerald-500 text-white px-4 py-1.5 rounded-bl-2xl text-[9px] font-bold uppercase tracking-widest">
               Future
             </div>
 
             <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
-              <mat-icon class="text-emerald-400 text-lg">auto_awesome</mat-icon>
+              <lucide-icon name="sparkles" [size]="11" class="text-emerald-400 transition-colors group-hover:text-[#00FF9D]"></lucide-icon>
               Future Evolution
             </h3>
 
             <div class="space-y-6">
               @for (item of futureItems; track item.title) {
                 <div class="relative pl-6 border-l border-white/10">
-                  <div class="absolute left-[-4px] top-1 w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.5)]"></div>
+                  <div class="absolute left-[-4px] top-1 w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8_rgba(52,211,153,0.5)]"></div>
                   <h4 class="font-bold text-emerald-400 text-xs mb-0.5">{{ item.title }}</h4>
                   <p class="text-[10px] text-gray-400 leading-relaxed">{{ item.description }}</p>
                 </div>
@@ -81,7 +81,6 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 20px; width: 20px; height: 20px; }
   `]
 })
 export class SlideV1ScopeComponent {

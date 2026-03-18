@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-what-they-get',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
+    <div class="h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 pt-4 pb-12">
       
       <!-- Background Neural Network SVG -->
       <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
@@ -46,16 +46,15 @@ import { MatIconModule } from '@angular/material/icon';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           @for (benefit of benefits; track benefit.id) {
             <div 
-              class="group relative p-6 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-benefit-reveal overflow-hidden"
-              [style.animation-delay]="benefit.id * 0.2 + 's'"
+              class="group relative p-6 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 overflow-hidden"
             >
               <!-- Animated Background Glow -->
               <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-syntra-action-primary/20 rounded-full blur-3xl opacity-40 group-hover:opacity-100 transition-opacity duration-700"></div>
               
               <div class="relative z-10 flex items-start gap-8">
                 <!-- Icon Container -->
-                <div class="w-16 h-16 shrink-0 rounded-2xl bg-syntra-bg-dark border border-white/10 flex items-center justify-center group-hover:bg-syntra-action-primary group-hover:text-syntra-bg-dark transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
-                  <mat-icon class="text-4xl">{{ benefit.icon }}</mat-icon>
+                <div class="w-16 h-16 shrink-0 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-syntra-action-primary transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+                  <lucide-icon [name]="benefit.icon" [size]="35" class="text-white/20 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
                 </div>
 
                 <!-- Content -->
@@ -78,9 +77,9 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <!-- Bottom Callout -->
-        <div class="mt-16 text-center animate-fade-in" style="animation-delay: 1.5s">
-          <div class="inline-flex items-center gap-4 px-8 py-4 rounded-full border border-syntra-action-primary/30 bg-syntra-action-primary/5 backdrop-blur-md">
-            <mat-icon class="text-syntra-action-primary animate-pulse">verified</mat-icon>
+        <div class="mt-16 text-center animate-fade-in group" style="animation-delay: 1.5s">
+          <div class="inline-flex items-center gap-4 px-8 py-4 rounded-full border border-syntra-action-primary/30 bg-syntra-action-primary/5 backdrop-blur-md hover:bg-syntra-action-primary/20 transition-all">
+            <lucide-icon name="shield-check" [size]="11" class="text-white/20 group-hover:text-[#00FF9D] transition-colors animate-pulse"></lucide-icon>
             <span class="text-white font-bold tracking-widest uppercase text-sm">Full Partner Enablement Package</span>
           </div>
         </div>
@@ -104,7 +103,6 @@ import { MatIconModule } from '@angular/material/icon';
       to { opacity: 1; transform: scale(1) translateY(0); }
     }
     .animate-benefit-reveal {
-      opacity: 0;
       animation: benefit-reveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
   `]
@@ -113,9 +111,9 @@ export class SlideWhatTheyGetComponent {
   t = inject(TranslationService);
 
   benefits = [
-    { id: 1, icon: 'api' },
-    { id: 2, icon: 'branding_watermark' },
-    { id: 3, icon: 'architecture' },
-    { id: 4, icon: 'payments' }
+    { id: 1, icon: 'cpu' },
+    { id: 2, icon: 'layout' },
+    { id: 3, icon: 'layers' },
+    { id: 4, icon: 'credit-card' }
   ];
 }

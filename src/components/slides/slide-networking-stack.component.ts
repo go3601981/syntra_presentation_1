@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, UserSearch, MessageSquare, CalendarCheck, Sparkles, ArrowRight } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-networking-stack',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-5xl mx-auto px-6 py-12 lg:py-4 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -30,8 +30,8 @@ import { MatIconModule } from '@angular/material/icon';
           <!-- Layer 1: Discovery -->
           <div class="bg-white rounded-2xl border border-blue-100 shadow-sm p-4 relative group hover:border-blue-300 transition-all">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
-              <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
-                <mat-icon class="text-lg">person_search</mat-icon>
+              <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
+                <lucide-icon [name]=\"UserSearch\" [size]=\"26\"></lucide-icon>
               </div>
               <div class="flex-1">
                 <div class="flex items-center gap-2 mb-0.5">
@@ -51,8 +51,8 @@ import { MatIconModule } from '@angular/material/icon';
           <!-- Layer 2: Interaction -->
           <div class="bg-white rounded-2xl border border-indigo-100 shadow-sm p-4 relative group hover:border-indigo-300 transition-all">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
-              <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-indigo-200">
-                <mat-icon class="text-lg">forum</mat-icon>
+              <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-indigo-200">
+                <lucide-icon [name]=\"MessageSquare\" [size]=\"26\"></lucide-icon>
               </div>
               <div class="flex-1">
                 <div class="flex items-center gap-2 mb-0.5">
@@ -72,8 +72,8 @@ import { MatIconModule } from '@angular/material/icon';
           <!-- Layer 3: Coordination -->
           <div class="bg-white rounded-2xl border border-emerald-100 shadow-sm p-4 relative group hover:border-emerald-300 transition-all">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
-              <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-emerald-200">
-                <mat-icon class="text-lg">event_available</mat-icon>
+              <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-emerald-200">
+                <lucide-icon [name]=\"CalendarCheck\" [size]=\"26\"></lucide-icon>
               </div>
               <div class="flex-1">
                 <div class="flex items-center gap-2 mb-0.5">
@@ -93,8 +93,8 @@ import { MatIconModule } from '@angular/material/icon';
           <!-- Layer 4: Intelligence -->
           <div class="bg-slate-900 rounded-2xl shadow-xl p-4 relative group border-t-2 border-violet-500">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
-              <div class="w-10 h-10 rounded-xl bg-violet-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-violet-900/50">
-                <mat-icon class="text-lg">auto_awesome</mat-icon>
+              <div class="w-12 h-12 rounded-xl bg-violet-600 text-white flex items-center justify-center shrink-0 shadow-lg shadow-violet-900/50">
+                <lucide-icon [name]=\"Sparkles\" [size]=\"26\"></lucide-icon>
               </div>
               <div class="flex-1">
                 <div class="flex items-center gap-2 mb-0.5">
@@ -115,11 +115,11 @@ import { MatIconModule } from '@angular/material/icon';
         <div class="mt-6 p-3 bg-gray-50 rounded-xl border border-gray-200 flex items-center justify-center gap-4">
           <div class="flex items-center gap-1.5 text-[10px] font-bold text-gray-500 uppercase tracking-wider">
             <span>Discovery</span>
-            <mat-icon class="text-[12px] w-3 h-3">arrow_forward</mat-icon>
+            <lucide-icon [name]="ArrowRight" [size]="6"></lucide-icon>
             <span>Interaction</span>
-            <mat-icon class="text-[12px] w-3 h-3">arrow_forward</mat-icon>
+            <lucide-icon [name]="ArrowRight" [size]="6"></lucide-icon>
             <span>Coordination</span>
-            <mat-icon class="text-[12px] w-3 h-3">arrow_forward</mat-icon>
+            <lucide-icon [name]="ArrowRight" [size]="6"></lucide-icon>
             <span class="text-blue-600">Intelligent Recommendations</span>
           </div>
         </div>
@@ -128,7 +128,12 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
-export class SlideNetworkingStackComponent {}
+export class SlideNetworkingStackComponent {
+  readonly UserSearch = UserSearch;
+  readonly MessageSquare = MessageSquare;
+  readonly CalendarCheck = CalendarCheck;
+  readonly Sparkles = Sparkles;
+  readonly ArrowRight = ArrowRight;
+}

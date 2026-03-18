@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Sparkles } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-why-syntra',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
       
@@ -78,10 +78,10 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <!-- Vision Footer -->
-        <div class="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 animate-fade-in" style="animation-delay: 1.5s">
+        <div class="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 animate-fade-in group" style="animation-delay: 1.5s">
           <div class="flex items-center gap-6">
-            <div class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center animate-spin-slow">
-              <mat-icon class="text-syntra-action-primary">auto_awesome</mat-icon>
+            <div class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center animate-spin-slow hover:bg-syntra-action-primary transition-all">
+              <lucide-icon name="sparkles" [size]="35" class="text-white/20 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
             </div>
             <span class="text-white/40 uppercase tracking-[0.3em] font-medium text-sm">The Future is Synthetic</span>
           </div>

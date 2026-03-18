@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-partner-role',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
-    <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
+    <div class="h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-4">
       
       <!-- Background Neural Network SVG -->
       <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
@@ -25,9 +25,9 @@ import { MatIconModule } from '@angular/material/icon';
       <!-- Digital Noise Overlay -->
       <div class="absolute inset-0 opacity-10 pointer-events-none bg-noise"></div>
 
-      <div class="relative z-10 w-full max-w-7xl">
+      <div class="relative z-10 w-full max-w-6xl">
         <!-- Header -->
-        <div class="text-center mb-8 animate-fade-in">
+        <div class="text-center mb-4 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
             Strategic Integration
           </div>
@@ -37,18 +37,18 @@ import { MatIconModule } from '@angular/material/icon';
           <div class="mt-6 w-24 h-1 bg-syntra-action-primary mx-auto rounded-full shadow-[0_0_15px_#3EFFC4]"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative">
           <!-- Connection Line (Animated) -->
           <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-px bg-syntra-action-primary hidden md:block animate-pulse shadow-[0_0_10px_#3EFFC4]"></div>
           
           <!-- Partner Column -->
-          <div class="group relative p-8 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-slide-left overflow-hidden">
+          <div class="group relative p-6 rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-slide-left overflow-hidden">
             <div class="absolute -top-20 -left-20 w-40 h-40 bg-syntra-action-primary/10 rounded-full blur-3xl"></div>
             
             <div class="relative z-10">
               <div class="flex items-center gap-6 mb-10">
-                <div class="w-16 h-16 rounded-2xl bg-syntra-bg-dark border border-white/10 flex items-center justify-center text-syntra-action-primary">
-                  <mat-icon class="text-4xl">handshake</mat-icon>
+                <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-syntra-action-primary transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+                  <lucide-icon name="handshake" [size]="35" class="text-white/20 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
                 </div>
                 <h3 class="text-3xl font-black text-white uppercase tracking-tight">
                   {{ t.translate('slide10.partner_label') }}
@@ -69,13 +69,13 @@ import { MatIconModule } from '@angular/material/icon';
           </div>
 
           <!-- Syntra Column -->
-          <div class="group relative p-8 rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-slide-right overflow-hidden">
+          <div class="group relative p-6 rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:bg-white/10 hover:border-syntra-action-primary/50 transition-all duration-700 animate-slide-right overflow-hidden">
             <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-syntra-action-primary/10 rounded-full blur-3xl"></div>
 
             <div class="relative z-10">
               <div class="flex items-center gap-6 mb-10">
-                <div class="w-16 h-16 rounded-2xl bg-syntra-action-primary flex items-center justify-center text-syntra-bg-dark shadow-[0_0_20px_rgba(62,255,196,0.4)]">
-                  <mat-icon class="text-4xl">hub</mat-icon>
+                <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-syntra-action-primary transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+                  <lucide-icon name="network" [size]="35" class="text-white/20 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
                 </div>
                 <h3 class="text-3xl font-black text-white uppercase tracking-tight">
                   {{ t.translate('slide10.syntra_label') }}
@@ -97,9 +97,9 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <!-- Synergy Footer -->
-        <div class="mt-16 text-center animate-fade-in" style="animation-delay: 1.5s">
-          <div class="inline-flex items-center gap-4 px-8 py-4 rounded-full border border-syntra-action-primary/30 bg-syntra-action-primary/5 backdrop-blur-md">
-            <mat-icon class="text-syntra-action-primary animate-pulse">bolt</mat-icon>
+        <div class="mt-8 text-center animate-fade-in group" style="animation-delay: 1.5s">
+          <div class="inline-flex items-center gap-4 px-8 py-4 rounded-full border border-syntra-action-primary/30 bg-syntra-action-primary/5 backdrop-blur-md hover:bg-syntra-action-primary/20 transition-all">
+            <lucide-icon name="bolt" [size]="11" class="text-white/20 group-hover:text-[#00FF9D] transition-colors animate-pulse"></lucide-icon>
             <span class="text-white font-bold tracking-widest uppercase text-sm">Unified Operational Intelligence</span>
           </div>
         </div>
@@ -143,14 +143,14 @@ export class SlidePartnerRoleComponent {
   t = inject(TranslationService);
 
   partnerTasks = [
-    { icon: 'campaign', key: 'slide10.p_task1' },
-    { icon: 'monetization_on', key: 'slide10.p_task2' },
-    { icon: 'language', key: 'slide10.p_task3' }
+    { key: 'slide10.p_task1' },
+    { key: 'slide10.p_task2' },
+    { key: 'slide10.p_task3' }
   ];
 
   syntraTasks = [
-    { icon: 'engineering', key: 'slide10.s_task1' },
-    { icon: 'biotech', key: 'slide10.s_task2' },
-    { icon: 'verified', key: 'slide10.s_task3' }
+    { key: 'slide10.s_task1' },
+    { key: 'slide10.s_task2' },
+    { key: 'slide10.s_task3' }
   ];
 }

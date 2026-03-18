@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Calendar, Brain, Sparkles, CheckCircle } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-matchmaking',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-12 lg:py-4 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -25,8 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
           <!-- Problem Solved -->
           <div class="p-6 bg-white rounded-[24px] border border-slate-100 shadow-sm relative group overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-1 bg-slate-200 group-hover:bg-violet-400 transition-colors"></div>
-            <div class="w-10 h-10 rounded-2xl bg-slate-50 text-slate-400 flex items-center justify-center mx-auto mb-3">
-              <mat-icon class="text-xl">calendar_today</mat-icon>
+            <div class="w-12 h-12 rounded-2xl bg-slate-50 text-slate-400 flex items-center justify-center mx-auto mb-3">
+              <lucide-icon [name]=\"Calendar\" [size]=\"26\"></lucide-icon>
             </div>
             <h3 class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1 italic">The "How"</h3>
             <p class="text-base text-slate-600 font-light">
@@ -37,8 +37,8 @@ import { MatIconModule } from '@angular/material/icon';
           <!-- The New Problem -->
           <div class="p-6 bg-white rounded-[24px] border-2 border-violet-600 shadow-xl shadow-violet-500/10 relative group overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-1 bg-violet-600"></div>
-            <div class="w-10 h-10 rounded-2xl bg-violet-600 text-white flex items-center justify-center mx-auto mb-3 shadow-lg shadow-violet-200">
-              <mat-icon class="text-xl">psychology</mat-icon>
+            <div class="w-12 h-12 rounded-2xl bg-violet-600 text-white flex items-center justify-center mx-auto mb-3 shadow-lg shadow-violet-200">
+              <lucide-icon [name]=\"Brain\" [size]=\"26\"></lucide-icon>
             </div>
             <h3 class="text-[9px] font-bold text-violet-600 uppercase tracking-widest mb-1 italic">The "Who"</h3>
             <p class="text-base text-slate-900 font-bold">
@@ -49,8 +49,8 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <div class="p-6 bg-slate-900 rounded-[24px] text-white flex flex-col md:flex-row items-center gap-6 text-left">
-          <div class="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center shrink-0">
-            <mat-icon class="text-violet-400 text-2xl">auto_awesome</mat-icon>
+          <div class="w-14 h-14 rounded-full bg-violet-500/20 flex items-center justify-center shrink-0">
+            <lucide-icon [name]=\"Sparkles\" [size]=\"30\" class=\"text-violet-400\"></lucide-icon>
           </div>
           <div class="flex-1">
             <h4 class="text-violet-400 text-[9px] font-bold uppercase tracking-widest mb-1">The Capability</h4>
@@ -60,7 +60,7 @@ import { MatIconModule } from '@angular/material/icon';
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
               @for (signal of dataSignals; track signal) {
                 <div class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/10 flex items-center gap-2">
-                  <mat-icon class="text-[10px] text-violet-400">check_circle</mat-icon>
+                  <lucide-icon [name]="CheckCircle" [size]="6" class="text-violet-400"></lucide-icon>
                   <span class="text-[10px] text-gray-300 font-medium">{{ signal }}</span>
                 </div>
               }
@@ -72,10 +72,14 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 32px; width: 32px; height: 32px; }
   `]
 })
 export class SlideMatchmakingComponent {
+  readonly Calendar = Calendar;
+  readonly Brain = Brain;
+  readonly Sparkles = Sparkles;
+  readonly CheckCircle = CheckCircle;
+
   readonly dataSignals = [
     'Shared Interests',
     'Professional Goals',

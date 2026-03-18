@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, BarChart, Map, Code, Globe, ArrowRight } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-services',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center items-center relative overflow-hidden bg-syntra-bg-dark px-6 py-8">
       
@@ -59,8 +59,8 @@ import { MatIconModule } from '@angular/material/icon';
               
               <div class="relative z-10 flex items-start gap-8">
                 <!-- Icon Container -->
-                <div class="w-16 h-16 rounded-2xl bg-syntra-bg-dark border border-white/10 flex items-center justify-center group-hover:bg-syntra-action-primary group-hover:text-syntra-bg-dark transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
-                  <mat-icon class="text-4xl">{{ service.icon }}</mat-icon>
+                <div class="w-20 h-20 rounded-2xl bg-syntra-bg-dark border border-white/10 flex items-center justify-center transition-all duration-500 shadow-lg group-hover:shadow-[0_0_20px_rgba(62,255,196,0.4)]">
+                  <lucide-icon [name]="service.icon" [size]="44" class="text-gray-500 group-hover:text-syntra-action-primary transition-colors duration-500"></lucide-icon>
                 </div>
 
                 <!-- Content -->
@@ -80,8 +80,8 @@ import { MatIconModule } from '@angular/material/icon';
               </div>
 
               <!-- Hover Arrow -->
-              <div class="absolute bottom-8 right-8 opacity-20 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-500">
-                <mat-icon class="text-syntra-action-primary">arrow_forward</mat-icon>
+              <div class="absolute bottom-8 right-8 opacity-40 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-500">
+                <lucide-icon [name]="ArrowRight" [size]="24" class="text-syntra-action-primary"></lucide-icon>
               </div>
             </div>
           }
@@ -112,11 +112,12 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class SlideServicesComponent {
   t = inject(TranslationService);
+  readonly ArrowRight = ArrowRight;
 
   services = [
-    { id: 1, icon: 'analytics', key: 'service1' },
-    { id: 2, icon: 'map', key: 'service2' },
-    { id: 3, icon: 'code', key: 'service3' },
-    { id: 4, icon: 'public', key: 'service4' }
+    { id: 1, icon: BarChart, key: 'service1' },
+    { id: 2, icon: Map, key: 'service2' },
+    { id: 3, icon: Code, key: 'service3' },
+    { id: 4, icon: Globe, key: 'service4' }
   ];
 }

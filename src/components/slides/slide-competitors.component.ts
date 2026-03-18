@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Network, Settings, Info, Lock } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-competitors',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-12 lg:py-4 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -24,8 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
           <div class="space-y-4">
             <div class="p-5 bg-white rounded-3xl border border-gray-100 shadow-sm relative">
               <div class="flex items-center gap-3 mb-4">
-                <div class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600 shadow-sm">
-                  <mat-icon class="text-lg">account_tree</mat-icon>
+                <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600 shadow-sm transition-all duration-500 hover:bg-amber-600 hover:text-white">
+                  <lucide-icon [name]="Network" [size]="26"></lucide-icon>
                 </div>
                 <div>
                   <h3 class="font-bold text-gray-900 text-sm">The "Whova" Model</h3>
@@ -49,11 +49,11 @@ import { MatIconModule } from '@angular/material/icon';
           <div class="space-y-4">
             <div class="p-5 bg-amber-50 rounded-3xl border border-amber-100 relative overflow-hidden">
               <div class="absolute top-0 right-0 p-3 opacity-10">
-                <mat-icon class="text-5xl">settings_suggest</mat-icon>
+                <lucide-icon [name]="Settings" [size]="35"></lucide-icon>
               </div>
               
               <h4 class="text-amber-800 font-bold text-[9px] uppercase tracking-widest mb-3 flex items-center gap-2">
-                <mat-icon class="text-[10px] w-3 h-3">info</mat-icon>
+                <lucide-icon [name]="Info" [size]="6"></lucide-icon>
                 The Core Logic
               </h4>
               
@@ -63,8 +63,8 @@ import { MatIconModule } from '@angular/material/icon';
 
               <div class="p-4 bg-white rounded-2xl border border-amber-200 shadow-sm">
                 <div class="flex items-center gap-2 mb-2">
-                  <div class="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
-                    <mat-icon class="text-[10px] w-3 h-3">lock</mat-icon>
+                  <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 transition-all duration-500 hover:bg-amber-600 hover:text-white">
+                    <lucide-icon [name]="Lock" [size]="17"></lucide-icon>
                   </div>
                   <span class="font-bold text-amber-900 text-xs">Rigid Control</span>
                 </div>
@@ -87,10 +87,14 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
   `]
 })
 export class SlideCompetitorsComponent {
+  readonly Network = Network;
+  readonly Settings = Settings;
+  readonly Info = Info;
+  readonly Lock = Lock;
+
   readonly approach = [
     { text: 'Organizer creates meeting blocks' },
     { text: 'Time slots are predefined' },

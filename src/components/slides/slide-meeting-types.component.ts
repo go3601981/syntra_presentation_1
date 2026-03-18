@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { LucideAngularModule, Users, Video, Calendar, Infinity } from 'lucide-angular';
 
 @Component({
   selector: 'app-slide-meeting-types',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, LucideAngularModule],
   template: `
     <div class="min-h-full flex flex-col justify-center max-w-6xl mx-auto px-6 py-24 lg:py-12 relative overflow-hidden">
       <!-- Background Decorative Elements -->
@@ -23,8 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           @for (type of meetingTypes; track type.title) {
             <div class="p-5 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-              <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                <mat-icon class="scale-110">{{ type.icon }}</mat-icon>
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                <lucide-icon [name]=\"type.icon\" [size]=\"26\"></lucide-icon>
               </div>
               <h3 class="text-base font-bold text-gray-900 mb-1">{{ type.title }}</h3>
               <p class="text-[11px] text-gray-500 leading-relaxed">
@@ -40,7 +40,7 @@ import { MatIconModule } from '@angular/material/icon';
             
             <div class="relative z-10 flex flex-col md:flex-row items-center gap-6">
               <div class="w-16 h-16 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0">
-                <mat-icon class="text-emerald-400 text-3xl">all_inclusive</mat-icon>
+                <lucide-icon [name]=\"Infinity\" [size]=\"35\" class=\"text-emerald-400\"></lucide-icon>
               </div>
               <div>
                 <h4 class="text-emerald-400 text-[10px] font-bold uppercase tracking-[0.2em] mb-1">The Long Tail</h4>
@@ -59,26 +59,26 @@ import { MatIconModule } from '@angular/material/icon';
   `,
   styles: [`
     :host { display: block; height: 100%; }
-    mat-icon { font-size: 24px; width: 24px; height: 24px; }
-    .scale-125 { transform: scale(1.25); }
   `]
 })
 export class SlideMeetingTypesComponent {
+  readonly Infinity = Infinity;
+
   readonly meetingTypes = [
     { 
       title: 'In-Person Meetings', 
       description: 'Attendees meet physically anywhere — inside the venue or elsewhere in the city.',
-      icon: 'groups'
+      icon: Users
     },
     { 
       title: 'Video Meetings', 
       description: 'Connect through integrated video calls for remote participants or post-session follow-ups.',
-      icon: 'videocam'
+      icon: Video
     },
     { 
       title: 'Future Meetings', 
       description: 'Schedule meetings after the event through direct calendar invitations and sync.',
-      icon: 'calendar_today'
+      icon: Calendar
     }
   ];
 }
