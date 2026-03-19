@@ -39,7 +39,7 @@ import { LucideAngularModule, BarChart, Map, Code, Globe, ArrowRight } from 'luc
         <!-- Header -->
         <div class="text-center mb-8 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
-            Capabilities Manifest
+            {{ t.translate('slide6.manifest_label') }}
           </div>
           <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase">
             {{ t.translate('slide6.title') }}

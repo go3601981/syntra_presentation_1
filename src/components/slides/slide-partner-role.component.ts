@@ -29,7 +29,7 @@ import { LucideAngularModule } from 'lucide-angular';
         <!-- Header -->
         <div class="text-center mb-4 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
-            Strategic Integration
+            {{ t.translate('slide10.integration_label') }}
           </div>
           <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase">
             {{ t.translate('slide10.title') }}
@@ -100,7 +100,7 @@ import { LucideAngularModule } from 'lucide-angular';
         <div class="mt-8 text-center animate-fade-in group" style="animation-delay: 1.5s">
           <div class="inline-flex items-center gap-4 px-8 py-4 rounded-full border border-syntra-action-primary/30 bg-syntra-action-primary/5 backdrop-blur-md hover:bg-syntra-action-primary/20 transition-all">
             <lucide-icon name="bolt" [size]="11" class="text-white/20 group-hover:text-[#00FF9D] transition-colors animate-pulse"></lucide-icon>
-            <span class="text-white font-bold tracking-widest uppercase text-sm">Unified Operational Intelligence</span>
+            <span class="text-white font-bold tracking-widest uppercase text-sm">{{ t.translate('slide10.intelligence_label') }}</span>
           </div>
         </div>
       </div>

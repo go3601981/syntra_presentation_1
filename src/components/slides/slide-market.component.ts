@@ -28,7 +28,7 @@ import { LucideAngularModule, ShoppingCart, Cloud, Stethoscope, Landmark, User }
         <!-- Header -->
         <div class="text-center mb-16 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-4">
-            Market Sector Analysis
+            {{ t.translate('slide9.market_label') }}
           </div>
           <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase">
             {{ t.translate('slide9.title') }}

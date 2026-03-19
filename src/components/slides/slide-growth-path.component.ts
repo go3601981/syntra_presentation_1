@@ -25,7 +25,7 @@ import { LucideAngularModule, Star, TrendingUp, Handshake } from 'lucide-angular
         <!-- Header -->
         <div class="text-center mb-6 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-3">
-            Ascension Protocol
+            {{ t.translate('slide13.ascension_label') }}
           </div>
           <h2 class="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
             {{ t.translate('slide13.title') }}

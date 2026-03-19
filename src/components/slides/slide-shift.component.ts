@@ -64,7 +64,7 @@ import { LucideAngularModule, ArrowRight, Plus } from 'lucide-angular';
                   </div>
                 }
                 <div class="text-center pt-2">
-                  <span class="text-[10px] text-slate-500 font-medium italic">...and 1,270,000,000 more results</span>
+                  <span class="text-[10px] text-slate-500 font-medium italic">{{ t.translate('slide2.more_results') }}</span>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ import { LucideAngularModule, ArrowRight, Plus } from 'lucide-angular';
                   <div class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center border border-white/10 group-hover:bg-syntra-action-primary transition-all duration-500 shadow-lg group-hover:shadow-[0_0_15px_rgba(62,255,196,0.4)]">
                     <lucide-icon [name]="Plus" [size]="17" class="text-white/20 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
                   </div>
-                  <span class="text-syntra-action-primary font-bold text-xs tracking-widest uppercase">Synthesized Result</span>
+                  <span class="text-syntra-action-primary font-bold text-xs tracking-widest uppercase">{{ t.translate('slide2.synthesized_result') }}</span>
                 </div>
 
                 <div class="space-y-3 relative z-10">
@@ -109,7 +109,7 @@ import { LucideAngularModule, ArrowRight, Plus } from 'lucide-angular';
                   </div>
                   <div class="space-y-3">
                     <p class="text-white text-lg font-medium leading-relaxed">
-                      "The optimal strategy is a unified AI representation that ensures consistency across all LLM models..."
+                      {{ t.translate('slide2.ai_quote') }}
                     </p>
                     <div class="flex flex-col gap-1.5">
                       <div class="h-1.5 w-full bg-white/10 rounded"></div>
@@ -124,7 +124,7 @@ import { LucideAngularModule, ArrowRight, Plus } from 'lucide-angular';
                   <div class="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[7px] text-white/60">S1</div>
                   <div class="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[7px] text-white/60">S2</div>
                   <div class="w-5 h-5 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[7px] text-white/60">S3</div>
-                  <span class="text-[9px] text-white/40 self-center ml-2">+ 12 verified sources</span>
+                  <span class="text-[9px] text-white/40 self-center ml-2">{{ t.translate('slide2.verified_sources') }}</span>
                 </div>
               </div>
             </div>

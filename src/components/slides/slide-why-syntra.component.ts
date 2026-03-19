@@ -83,7 +83,7 @@ import { LucideAngularModule, Sparkles } from 'lucide-angular';
             <div class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center animate-spin-slow hover:bg-syntra-action-primary transition-all">
               <lucide-icon name="sparkles" [size]="35" class="text-white/20 group-hover:text-[#00FF9D] transition-colors"></lucide-icon>
             </div>
-            <span class="text-white/40 uppercase tracking-[0.3em] font-medium text-sm">The Future is Synthetic</span>
+            <span class="text-white/40 uppercase tracking-[0.3em] font-medium text-sm">{{ t.translate('slide14.future_label') }}</span>
           </div>
           <div class="text-white font-bold text-4xl md:text-6xl tracking-tight drop-shadow-[0_0_15px_rgba(62,255,196,0.3)] select-none uppercase">
             SYNTRA ADVISORY

@@ -25,7 +25,7 @@ import { LucideAngularModule, Phone, Map, Rocket, Calendar, ArrowRight } from 'l
         <!-- Header -->
         <div class="text-center mb-4 animate-fade-in">
           <div class="inline-block px-3 py-1 border border-syntra-action-primary/30 rounded text-[10px] font-bold tracking-[0.4em] text-syntra-action-primary uppercase mb-2">
-            Initiation Sequence
+            {{ t.translate('slide15.initiation_label') }}
           </div>
           <h2 class="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase">
             {{ t.translate('slide15.title') }}
@@ -82,7 +82,7 @@ import { LucideAngularModule, Phone, Map, Rocket, Calendar, ArrowRight } from 'l
           <div class="mt-4 flex items-center justify-center gap-4">
             <div class="h-px w-12 bg-white/10"></div>
             <p class="text-[9px] text-white/30 font-bold uppercase tracking-[0.5em]">
-              Limited Territories Available for 2026
+              {{ t.translate('slide15.availability_label') }}
             </p>
             <div class="h-px w-12 bg-white/10"></div>
           </div>

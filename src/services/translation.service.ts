@@ -55,6 +55,25 @@ export class TranslationService {
     'slide2.query3': { en: 'Syntra Advisory reviews', de: 'Syntra Advisory Bewertungen', pt: 'Avaliações da Syntra Advisory', es: 'Reseñas de Syntra Advisory' },
     'slide2.search_label': { en: 'Traditional Search', de: 'Traditionelle Suche', pt: 'Busca Tradicional', es: 'Búsqueda Tradicional' },
     'slide2.ai_label': { en: 'AI-Driven Search', de: 'KI-gesteuerte Suche', pt: 'Busca Impulsionada por IA', es: 'Búsqueda Impulsada por IA' },
+    'slide2.synthesized_result': { en: 'Synthesized Result', de: 'Synthetisiertes Ergebnis', pt: 'Resultado Sintetizado', es: 'Resultado Sintetizado' },
+    'slide2.ai_quote': { 
+      en: '"The optimal strategy is a unified AI representation that ensures consistency across all LLM models..."', 
+      de: '"Die optimale Strategie ist eine einheitliche KI-Repräsentation, die Konsistenz über alle LLM-Modelle hinweg gewährleistet..."', 
+      pt: '"A estratégia ideal é uma representação de IA unificada que garanta consistência em todos os modelos de LLM..."', 
+      es: '"La estrategia óptima es una representación de IA unificada que garantice la coherencia en todos los modelos de LLM..."' 
+    },
+    'slide2.more_results': { 
+      en: '...and 1,270,000,000 more results', 
+      de: '...und 1.270.000.000 weitere Ergebnisse', 
+      pt: '...e mais 1.270.000.000 resultados', 
+      es: '...y 1,270,000,000 resultados más' 
+    },
+    'slide2.verified_sources': { 
+      en: '+ 12 verified sources', 
+      de: '+ 12 verifizierte Quellen', 
+      pt: '+ 12 fontes verificadas', 
+      es: '+ 12 fuentes verificadas' 
+    },
 
     // Slide 3: The Problem
     'slide3.title': { 
@@ -109,6 +128,12 @@ export class TranslationService {
     },
 
     // Slide 6: Services
+    'slide6.manifest_label': { 
+      en: 'Capabilities Manifest', 
+      de: 'Leistungsverzeichnis', 
+      pt: 'Manifesto de Capacidades', 
+      es: 'Manifiesto de Capacidades' 
+    },
     'slide6.title': { 
       en: 'Our Core Services', 
       de: 'Unsere Kernleistungen', 
@@ -165,6 +190,12 @@ export class TranslationService {
     },
 
     // Slide 7: How It Works
+    'slide7.protocol_label': { 
+      en: 'Operational Protocol', 
+      de: 'Betriebsprotokoll', 
+      pt: 'Protocolo Operacional', 
+      es: 'Protocolo Operativo' 
+    },
     'slide7.title': { 
       en: 'How It Works', 
       de: 'Wie es funktioniert', 
@@ -237,6 +268,12 @@ export class TranslationService {
     'slide8.urgency_label': { en: 'URGENCY', de: 'DRINGLICHKEIT', pt: 'URGÊNCIA', es: 'URGENCIA' },
 
     // Slide 9: Market
+    'slide9.market_label': { 
+      en: 'Market Sector Analysis', 
+      de: 'Marktsektor-Analyse', 
+      pt: 'Análise do Setor de Mercado', 
+      es: 'Análisis del Sector de Mercado' 
+    },
     'slide9.title': { 
       en: 'Target Industries', 
       de: 'Zielbranchen', 
@@ -256,6 +293,12 @@ export class TranslationService {
     'slide9.ind5': { en: 'Personal Brands', de: 'Personal Brands', pt: 'Marcas Pessoais', es: 'Marcas Personales' },
 
     // Slide 10: Partner Role
+    'slide10.integration_label': { 
+      en: 'Strategic Integration', 
+      de: 'Strategische Integration', 
+      pt: 'Integração Estratégica', 
+      es: 'Integración Estratégica' 
+    },
     'slide10.title': { 
       en: 'Strategic Partnership Structure', 
       de: 'Strategische Partnerschaftsstruktur', 
@@ -270,8 +313,20 @@ export class TranslationService {
     'slide10.s_task1': { en: 'Technical delivery', de: 'Technische Umsetzung', pt: 'Entrega técnica', es: 'Entrega técnica' },
     'slide10.s_task2': { en: 'Global R&D', de: 'Globale F&E', pt: 'P&D Global', es: 'I+D Global' },
     'slide10.s_task3': { en: 'Brand authority', de: 'Markenautorität', pt: 'Autoridade da marca', es: 'Autoridad de marca' },
+    'slide10.intelligence_label': { 
+      en: 'Unified Operational Intelligence', 
+      de: 'Einheitliche operative Intelligenz', 
+      pt: 'Inteligência Operacional Unificada', 
+      es: 'Inteligencia Operativa Unificada' 
+    },
 
     // Slide 11: What They Get
+    'slide11.proposition_label': { 
+      en: 'Value Proposition', 
+      de: 'Wertversprechen', 
+      pt: 'Proposta de Valor', 
+      es: 'Propuesta de Valor' 
+    },
     'slide11.title': { 
       en: 'What You Receive', 
       de: 'Was Sie erhalten', 
@@ -292,8 +347,20 @@ export class TranslationService {
     'slide11.benefit3_desc': { en: 'Proven frameworks for AI strategy.', de: 'Bewährte Frameworks für KI-Strategie.', pt: 'Frameworks comprovados para estratégia de IA.', es: 'Frameworks probados para estrategia de IA.' },
     'slide11.benefit4_title': { en: 'Sales Support', de: 'Vertriebsunterstützung', pt: 'Suporte de Vendas', es: 'Soporte de Ventas' },
     'slide11.benefit4_desc': { en: 'Training and direct closing assistance.', de: 'Schulung und direkte Unterstützung beim Abschluss.', pt: 'Treinamento e assistência direta no fechamento.', es: 'Capacitación y asistencia directa en el cierre.' },
+    'slide11.enablement_label': { 
+      en: 'Full Partner Enablement Package', 
+      de: 'Vollständiges Partner-Enablement-Paket', 
+      pt: 'Pacote Completo de Capacitação de Parceiros', 
+      es: 'Paquete Completo de Habilitación de Socios' 
+    },
 
     // Slide 12: Business Model
+    'slide12.architecture_label': { 
+      en: 'Economic Architecture', 
+      de: 'Ökonomische Architektur', 
+      pt: 'Arquitetura Económica', 
+      es: 'Arquitectura Económica' 
+    },
     'slide12.title': { 
       en: 'Business Model', 
       de: 'Geschäftsmodell', 
@@ -319,6 +386,12 @@ export class TranslationService {
     'slide12.calc_syntra': { en: 'Syntra', de: 'Syntra', pt: 'Syntra', es: 'Syntra' },
 
     // Slide 13: Growth Path
+    'slide13.ascension_label': { 
+      en: 'Ascension Protocol', 
+      de: 'Aufstiegsprotokoll', 
+      pt: 'Protocolo de Ascensão', 
+      es: 'Protocolo de Ascensión' 
+    },
     'slide13.title': { 
       en: 'Growth Path', 
       de: 'Wachstumspfad', 
@@ -357,6 +430,12 @@ export class TranslationService {
     'slide14.point2_desc': { en: 'Defining the future of AI human representation.', de: 'Die Zukunft der menschlichen KI-Repräsentation definieren.', pt: 'Definindo o futuro da representação humana por IA.', es: 'Definiendo el futuro de la representación humana por IA.' },
     'slide14.point3_title': { en: 'High Value Services', de: 'Hochwertige Dienstleistungen', pt: 'Serviços de Alto Valor', es: 'Servicios de Alto Valor' },
     'slide14.point3_desc': { en: 'Premium solutions for high-impact results.', de: 'Premium-Lösungen für wirkungsvolle Ergebnisse.', pt: 'Soluções premium para resultados de alto impacto.', es: 'Soluciones premium para resultados de alto impacto.' },
+    'slide14.future_label': { 
+      en: 'The Future is Synthetic', 
+      de: 'Die Zukunft ist synthetisch', 
+      pt: 'O Futuro é Sintético', 
+      es: 'El Futuro es Sintético' 
+    },
 
     // Slide 15: Next Steps
     'slide15.title': { 
@@ -377,6 +456,18 @@ export class TranslationService {
     'slide15.step2_desc': { en: 'Defining exclusive regional opportunities.', de: 'Definition exklusiver regionaler Möglichkeiten.', pt: 'Definição de oportunidades regionais exclusivas.', es: 'Definiendo oportunidades regionales exclusivas.' },
     'slide15.step3_title': { en: 'Pilot Phase', de: 'Pilotphase', pt: 'Fase Piloto', es: 'Fase Piloto' },
     'slide15.step3_desc': { en: 'Initial deployment and market validation.', de: 'Erste Bereitstellung und Marktvalidierung.', pt: 'Implantação inicial e validação de mercado.', es: 'Despliegue inicial y validación de mercado.' },
+    'slide15.initiation_label': { 
+      en: 'Initiation Sequence', 
+      de: 'Einleitungssequenz', 
+      pt: 'Sequência de Iniciação', 
+      es: 'Secuencia de Iniciación' 
+    },
+    'slide15.availability_label': { 
+      en: 'Limited Territories Available for 2026', 
+      de: 'Begrenzte Gebiete für 2026 verfügbar', 
+      pt: 'Territórios Limitados Disponíveis para 2026', 
+      es: 'Territorios Limitados Disponibles para 2026' 
+    },
     'slide15.cta': { en: 'Schedule Discovery', de: 'Discovery vereinbaren', pt: 'Agendar Descoberta', es: 'Programar Descubrimiento' },
 
     // Slide 16: Closing
